@@ -14,24 +14,24 @@ class TabBarController: UITabBarController {
         
         view.backgroundColor = .systemBackground
         
-        self.tabBar.backgroundColor = UIColor(red: 48.0 / 255, green: 4.0 / 255, blue: 69.0 / 255, alpha: 1)
+        self.tabBar.backgroundColor = UIColor(red: 10.0 / 255, green: 0.0 / 255, blue: 114.0 / 255, alpha: 1)
         self.tabBar.tintColor = .white
         self.tabBar.unselectedItemTintColor = .lightGray
         let homeTabBar = UINavigationController(rootViewController: HomeVC())
-        homeTabBar.tabBarItem.title = "홈화면"
+        homeTabBar.tabBarItem.title = ""
         homeTabBar.tabBarItem.image = UIImage(systemName: "house")
         
         let sarchTabBar = UIViewController()
-        sarchTabBar.tabBarItem.title = "검색"
-        sarchTabBar.tabBarItem.image = UIImage(systemName: "magnifyingglass")
+        sarchTabBar.tabBarItem.title = ""
+        sarchTabBar.tabBarItem.image = UIImage(systemName: "questionmark")
         
         let bestTabBar = UIViewController()
-        bestTabBar.tabBarItem.title = "주간 베스트"
-        bestTabBar.tabBarItem.image = UIImage(systemName: "bookmark")
+        bestTabBar.tabBarItem.title = ""
+        bestTabBar.tabBarItem.image = UIImage(systemName: "person.2")
         
         let profileTabBar = UIViewController()
-        profileTabBar.tabBarItem.title = "프로필"
-        profileTabBar.tabBarItem.image = UIImage(systemName: "person.circle")
+        profileTabBar.tabBarItem.title = ""
+        profileTabBar.tabBarItem.image = UIImage(systemName: "person")
         
         viewControllers = [homeTabBar, sarchTabBar, bestTabBar, profileTabBar]
     }
