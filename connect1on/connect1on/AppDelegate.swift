@@ -9,12 +9,9 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
+        Thread.sleep(forTimeInterval: 2.0)    // 런치스크린 표시 시간 2초 강제 지연
+           return true
     }
 
     // MARK: UISceneSession Lifecycle
