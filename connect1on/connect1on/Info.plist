@@ -4,8 +4,7 @@
 <dict>
 	<key>Fonts provided by application </key>
 	<array>
-		<string>Artfont.ttf</string>
-		<string>Artfont.otf</string>
+		<string>Font.otf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
