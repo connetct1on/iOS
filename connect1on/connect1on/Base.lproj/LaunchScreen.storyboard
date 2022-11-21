@@ -21,23 +21,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bID-9Z-T4M">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                                <color key="backgroundColor" red="0.039215687659999998" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="GangwonEduAll-OTFBold" family="GangwonEduAll OTF" pointSize="128"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHQ-Ec-SuD">
+                                <rect key="frame" x="192" y="357" width="36" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GangwonEduAll-OTFBold" family="GangwonEduAll OTF" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="bID-9Z-T4M" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="0x1-85-HfT"/>
-                            <constraint firstItem="bID-9Z-T4M" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="A5h-hN-Zie"/>
-                            <constraint firstItem="bID-9Z-T4M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dNU-GR-Wkr"/>
-                            <constraint firstAttribute="bottom" secondItem="bID-9Z-T4M" secondAttribute="bottom" id="lD0-vN-V28"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0Ah-BP-J3g"/>
                 </viewController>
