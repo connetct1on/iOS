@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import SnapKit
 import Then
+import Alamofire
 
 class StuSignUpVC: UIViewController {
     let idTextField = UITextField().then {

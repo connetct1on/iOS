@@ -16,27 +16,29 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        view.backgroundColor = .systemBackground
         setupNavigationBarItem()
         self.navigationController?.navigationBar.tintColor = .black
     }
-    func setupNavigationBar() {
+    private func setupNavigationBar() {
         let navigationBarAppearance = UINavigationBarAppearance()
         navigationBarAppearance.backgroundColor = .systemBackground
         navigationController?.navigationBar.standardAppearance = navigationBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance
+        
     }
-   
-        func setupNavigationBarItem() {
-            
-            let massageButton = UIBarButtonItem(
-                image: UIImage(systemName: "paperplane"),
-                style: .plain,
-                target: self,
-                action: #selector(didTabMassageButton)
-            )
-            
-            navigationItem.rightBarButtonItem = massageButton
-        }
+    
+    private func setupNavigationBarItem() {
+
+        let massageButton = UIBarButtonItem(
+            image: UIImage(systemName: "paperplane"),
+            style: .plain,
+            target: self,
+            action: #selector(didTabMassageButton)
+        )
+
+        navigationItem.rightBarButtonItem = massageButton
+    }
     @objc func didTabMassageButton() {
         let VC = MassageVC()
         present(VC, animated: true, completion: nil)

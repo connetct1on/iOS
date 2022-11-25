@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import SnapKit
 import Then
+import Alamofire
 
 class SigninVC: UIViewController {
     let logolb = UILabel().then {
@@ -65,6 +66,7 @@ class SigninVC: UIViewController {
         print("signup")
         let VC = SltpstVC()
         present(VC, animated: true, completion: nil)
+        self.view.window?.rootViewController = SltpstVC()
     }
     
     override func viewDidLoad() {

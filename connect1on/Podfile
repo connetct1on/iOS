@@ -4,6 +4,7 @@
 target 'connect1on' do
    pod 'SnapKit'
    pod 'Then'
+   pod 'Alamofire'
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
