@@ -10,34 +10,70 @@ import UIKit
 import SnapKit
 import Then
 
-class SltpstVC: UIViewController {
+class SltPstVC: UIViewController {
     let stuSignUpButton = UIButton().then {
         $0.backgroundColor = UIColor(red: 10.0/255, green:0.0/255, blue:114.0/255, alpha: 1)
         $0.setTitle("재학생 회원가입", for: .normal)
         $0.layer.cornerRadius = 20
-        $0.addTarget(self, action: #selector(TabsigninBt), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(DidTabStuSignUpButton), for: .touchUpInside)
+        
+    }
+    let newStuSignUpButton = UIButton().then {
+        $0.backgroundColor = UIColor(red: 10.0/255, green:0.0/255, blue:114.0/255, alpha: 1)
+        $0.setTitle("신입생 회원가입", for: .normal)
+        $0.layer.cornerRadius = 20
+        $0.addTarget(self, action: #selector(DidTabnewStuSignUpButton), for: .touchUpInside)
+        
+    }
+    let prtSignUpButton = UIButton().then {
+        $0.backgroundColor = UIColor(red: 10.0/255, green:0.0/255, blue:114.0/255, alpha: 1)
+        $0.setTitle("학부모 회원가입", for: .normal)
+        $0.layer.cornerRadius = 20
+        $0.addTarget(self, action: #selector(DidTabPrtSignUpButton), for: .touchUpInside)
+        
     }
 
-    @objc func TabsigninBt() {
-
+    @objc func DidTabStuSignUpButton() {
         print("//")
+        
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupNavigationBar()
-        view.backgroundColor = .systemBackground
-        self.navigationController?.navigationBar.tintColor = .black
-        setup()
+    @objc func DidTabnewStuSignUpButton() {
+        print("//")
+        
     }
-    private func setupNavigationBar() {
-        let navigationBarAppearance = UINavigationBarAppearance()
-        navigationBarAppearance.backgroundColor = .systemBackground
-        navigationController?.navigationBar.standardAppearance = navigationBarAppearance
-        navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance
+    @objc func DidTabPrtSignUpButton() {
+        print("//")
         
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .systemBackground
+        SltPstSetupNavigationBar()
+        setup()
+        
+    }
     
+    func SltPstSetupNavigationBar() {
+        let sltPstNavigationBarAppearance = UINavigationBarAppearance()
+        sltPstNavigationBarAppearance.backgroundColor = .systemBackground
+        navigationController?.navigationBar.standardAppearance = sltPstNavigationBarAppearance
+        navigationController?.navigationBar.scrollEdgeAppearance = sltPstNavigationBarAppearance
+        
+    }
+    private func setupNavigationBarItem() {
+        let massageButton = UIBarButtonItem(
+            image: UIImage(systemName: "paperplane"),
+            style: .plain,
+            target: self,
+            action: #selector(didTabMassageButton)
+        )
+
+        navigationItem.rightBarButtonItem = massageButton
+    }
+    @objc func didTabMassageButton() {
+        print("sex")
+    }
     
     func setup() {
         [

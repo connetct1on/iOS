@@ -64,9 +64,9 @@ class SigninVC: UIViewController {
     
     @objc func TabsignupBt() {
         print("signup")
-        let VC = SltpstVC()
+        let VC = SltPstVC()
         present(VC, animated: true, completion: nil)
-        self.view.window?.rootViewController = SltpstVC()
+        self.view.window?.rootViewController = SltPstVC()
     }
     
     override func viewDidLoad() {

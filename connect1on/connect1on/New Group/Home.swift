@@ -29,7 +29,6 @@ class HomeVC: UIViewController {
     }
     
     private func setupNavigationBarItem() {
-
         let massageButton = UIBarButtonItem(
             image: UIImage(systemName: "paperplane"),
             style: .plain,
