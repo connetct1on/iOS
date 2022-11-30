@@ -16,23 +16,19 @@ class TabBarcontroller: UITabBarController {
         self.tabBar.backgroundColor = UIColor(red: 10.0 / 255, green: 0.0 / 255, blue: 114.0 / 255, alpha: 1)
         self.tabBar.tintColor = .white
         self.tabBar.unselectedItemTintColor = .lightGray
-        let homeTabBar = UINavigationController(rootViewController: HomeVC())
-        homeTabBar.tabBarItem.title = ""
-        homeTabBar.tabBarItem.image = UIImage(systemName: "house")
+        
         
         let sarchTabBar = UIViewController()
         sarchTabBar.tabBarItem.title = ""
         sarchTabBar.tabBarItem.image = UIImage(systemName: "questionmark")
-        
-        let bestTabBar = UIViewController()
-        bestTabBar.tabBarItem.title = ""
-        bestTabBar.tabBarItem.image = UIImage(systemName: "person.2")
-        
+        let homeTabBar = UINavigationController(rootViewController: HomeVC())
+        homeTabBar.tabBarItem.title = ""
+        homeTabBar.tabBarItem.image = UIImage(systemName: "house")
         let profileTabBar = UIViewController()
         profileTabBar.tabBarItem.title = ""
         profileTabBar.tabBarItem.image = UIImage(systemName: "person")
         
-        viewControllers = [homeTabBar, sarchTabBar, bestTabBar, profileTabBar]
+        viewControllers = [sarchTabBar, homeTabBar, profileTabBar]
     }
     
 }

@@ -10,6 +10,8 @@ import UIKit
 import SnapKit
 import Then
 import Alamofire
+import SwiftUI
+//import
 
 class SigninVC: UIViewController {
     let logolb = UILabel().then {
@@ -48,35 +50,43 @@ class SigninVC: UIViewController {
         $0.layer.cornerRadius = 20
         $0.addTarget(self, action: #selector(TabsigninBt), for: .touchUpInside)
     }
-    let signupBt = UIButton().then {
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 8)
-        $0.setTitle("                                                       회원이 아니신가요? 회원가입", for: .normal)
-        $0.setTitleColor(UIColor.black, for: .normal)
-        $0.addTarget(self, action: #selector(TabsignupBt), for: .touchUpInside)
-    }
     @objc func TabsigninBt() {
         let VC = TabBarcontroller()
-        present(VC, animated: true, completion: nil)
-        UIView.animate(withDuration: 0.3) {
-            self.view.window?.rootViewController = TabBarcontroller()
-        }
-    }
-    
-    @objc func TabsignupBt() {
-        print("sig₩nup")
-        let VC = SltPstVC()
+        VC.modalPresentationStyle = .fullScreen
         present(VC, animated: true, completion: nil)
     }
     
+    
+//    AF.request("\(api)/api/signin",
+//               method: .post,
+//               parameters: ["id": loginId,
+//                            "password":(data: loginPw.data(using: .utf8)!),
+//
+//               encoding: JSONEncoding.default,
+//               headers: ["Content-Type": "application/json"]
+//    )
+//    .validate()
+//    .responseData { response in
+//        switch response.result {
+//        case .success:
+//            guard let value = response.value else { return }
+//            guard let result = try? JSONDecoder().decode(LoginData.self, from: value) else { return }
+//            UserDefaults.standard.set(result.data.token, forKey: "token")
+//        case .failure(let error):
+//            print("통신 오류!\nCode:\(error._code), Message: \(error.errorDescription!)")
+//        }
+//    }
+//
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         
         setup()
     }
+
     func setup() {
         [
-            logolb, idlb, idTextField, pwTextField, pwlb, pwTextField, signinBt, signupBt
+            logolb, idlb, idTextField, pwTextField, pwlb, pwTextField, signinBt
         ].forEach{ self.view.addSubview($0)
         }
         logolb.snp.makeConstraints {
@@ -112,12 +122,6 @@ class SigninVC: UIViewController {
         signinBt.snp.makeConstraints {
             $0.top.equalTo(logolb).offset(350)
             $0.bottom.equalTo(logolb).offset(300)
-            $0.left.equalToSuperview().offset(70)
-            $0.right.equalToSuperview().offset(-70)
-        }
-        signupBt.snp.makeConstraints {
-            $0.top.equalTo(signinBt).offset(50)
-            $0.bottom.equalTo(signinBt).offset(25)
             $0.left.equalToSuperview().offset(70)
             $0.right.equalToSuperview().offset(-70)
         }

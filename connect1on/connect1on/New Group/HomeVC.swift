@@ -11,8 +11,7 @@ import Then
 import SnapKit
 
 class HomeVC: UIViewController {
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
@@ -20,12 +19,13 @@ class HomeVC: UIViewController {
         setupNavigationBarItem()
         self.navigationController?.navigationBar.tintColor = .black
     }
+    
     private func setupNavigationBar() {
         let navigationBarAppearance = UINavigationBarAppearance()
-        navigationBarAppearance.backgroundColor = .systemBackground
+        navigationBarAppearance.backgroundColor = .systemPink
         navigationController?.navigationBar.standardAppearance = navigationBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance
-        
+
     }
     
     private func setupNavigationBarItem() {
@@ -40,9 +40,8 @@ class HomeVC: UIViewController {
     }
     @objc func didTabMassageButton() {
         let VC = MassageVC()
+        VC.modalPresentationStyle = .fullScreen
         present(VC, animated: true, completion: nil)
-        UIView.animate(withDuration: 0.3) {
-            self.view.window?.rootViewController = MassageVC()
+        
         }
     }
-}
