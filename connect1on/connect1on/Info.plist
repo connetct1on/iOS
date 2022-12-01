@@ -4,8 +4,8 @@
 <dict>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-		<key>App Transport Security</key>
-		<false/>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
 	</dict>
 	<key>Fonts provided by application </key>
 	<array>

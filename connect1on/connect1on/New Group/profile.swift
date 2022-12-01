@@ -1,5 +1,5 @@
 //
-//  profile.swift
+//  ProfileVC.swift
 //  connect1on
 //
 //  Created by 최시훈 on 2022/11/17.

@@ -1,5 +1,5 @@
 //
-//  Home.swift
+//  HomeVC.swift
 //  connect1on
 //
 //  Created by 최시훈 on 2022/11/13.
@@ -17,25 +17,26 @@ class HomeVC: UIViewController {
         setupNavigationBar()
         view.backgroundColor = .systemBackground
         setupNavigationBarItem()
-        self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.tintColor = .white
     }
     
     private func setupNavigationBar() {
         let navigationBarAppearance = UINavigationBarAppearance()
-        navigationBarAppearance.backgroundColor = .systemPink
+        navigationBarAppearance.backgroundColor = UIColor(red: 10.0/255, green:0.0/255, blue:114.0/255, alpha: 1)
         navigationController?.navigationBar.standardAppearance = navigationBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance
 
     }
     
     private func setupNavigationBarItem() {
+        
         let massageButton = UIBarButtonItem(
             image: UIImage(systemName: "paperplane"),
             style: .plain,
             target: self,
             action: #selector(didTabMassageButton)
         )
-
+        //navigationItem.title = "navigationBarTitle"
         navigationItem.rightBarButtonItem = massageButton
     }
     @objc func didTabMassageButton() {
