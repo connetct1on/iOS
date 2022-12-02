@@ -21,10 +21,10 @@ class HomeVC: UIViewController {
     }
     
     private func setupNavigationBar() {
-        let navigationBarAppearance = UINavigationBarAppearance()
-        navigationBarAppearance.backgroundColor = UIColor(red: 10.0/255, green:0.0/255, blue:114.0/255, alpha: 1)
-        navigationController?.navigationBar.standardAppearance = navigationBarAppearance
-        navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance
+        let navigationBar = UINavigationBarAppearance()
+        navigationBar.backgroundColor = UIColor(red: 10.0/255, green:0.0/255, blue:114.0/255, alpha: 1)
+        navigationController?.navigationBar.standardAppearance = navigationBar
+        navigationController?.navigationBar.scrollEdgeAppearance = navigationBar
 
     }
     
@@ -40,7 +40,7 @@ class HomeVC: UIViewController {
         navigationItem.rightBarButtonItem = massageButton
     }
     @objc func didTabMassageButton() {
-        let VC = MassageVC()
+        let VC = MessageVC()
         VC.modalPresentationStyle = .fullScreen
         present(VC, animated: true, completion: nil)
         

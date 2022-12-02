@@ -5,15 +5,21 @@
 //  Created by 최시훈 on 2022/11/17.
 //
 
-import Foundation
 import UIKit
 import SnapKit
 import Then
 import Alamofire
 import SwiftUI
-//import
+import CryptoKit
 
 class SigninVC: UIViewController {
+    @State var id: String = ""
+    @State var pw: String = ""
+    @State var wrongId: Bool = false
+    @State var wrongPw: Bool = false
+    @State var request: Bool = false
+    @State var success: Bool = false
+    
     let logolb = UILabel().then {
         $0.text = "ALT"
         $0.font = UIFont(name: "GangwonEduAll-OTFBold", size:150)
@@ -26,7 +32,7 @@ class SigninVC: UIViewController {
         $0.text = " ID"
         //$0.backgroundColor = UIColor(red: 220.0 / 255, green: 220.0 / 225, blue: 220.0 / 225, alpha: 0.3)
     }
-    let idTextField = UITextField().then {
+    private lazy var idTextField = UITextField().then {
         $0.placeholder = "아이디를 입력해주세요"
         $0.font = .systemFont(ofSize: 14.0, weight: .medium)
         $0.autocapitalizationType = .none
@@ -37,11 +43,12 @@ class SigninVC: UIViewController {
         $0.text = " PW"
         $0.font = UIFont(name: "GangwonEduAll-OTFBold", size: 20)
     }
-    let pwTextField = UITextField().then {
+    private lazy var pwTextField = UITextField().then {
         $0.placeholder = "비밀번호를 입력해주세요"
         $0.font = .systemFont(ofSize: 14.0, weight: .medium)
         $0.autocapitalizationType = .none
-        $0.backgroundColor = UIColor(red: 220/255, green: 220/225, blue: 220/225, alpha: 1)
+        $0.isSecureTextEntry = true
+        $0.backgroundColor = UIColor(red: 239.0/255, green: 239.0/225, blue: 239.0/225, alpha: 1)
         $0.layer.cornerRadius = 20
     }
     let signinBt = UIButton().then {
@@ -50,40 +57,53 @@ class SigninVC: UIViewController {
         $0.layer.cornerRadius = 20
         $0.addTarget(self, action: #selector(TabsigninBt), for: .touchUpInside)
     }
+    //    @objc func TabsigninBt() {
+    //        let VC = TabBarcontroller()
+    //        VC.modalPresentationStyle = .fullScreen
+    //        present(VC, animated: true, completion: nil)
+    //    }
+    
     @objc func TabsigninBt() {
-        let VC = TabBarcontroller()
-        VC.modalPresentationStyle = .fullScreen
-        present(VC, animated: true, completion: nil)
+        let id = idTextField.text!
+        let pw = pwTextField.text!
+        print(id, pw)
+        AF.request("\(api)/api/signin",
+                   method: .post,
+                   parameters: ["id": id,
+                                "password": SHA512.hash(data: pw.data(using: .utf8)!).compactMap{ String(format: "%02x", $0) }.joined()],
+//                   SHA256.hash(data: Data(password.utf8))
+                   encoding : JSONEncoding.default,
+                   headers: ["Content-Type": "application/json"]
+        )
+        .validate()
+        .responseData { response in
+            switch response.result {
+            case.success:
+                let VC = TabBarcontroller()
+                VC.modalPresentationStyle = .fullScreen
+                self.present(VC, animated: true, completion: nil)
+//                guard let value = response.value else { return }
+//                guard let result = try? JSONDecoder().decode(LoginData.self, from: value) else { return }
+//                UserDefaults.standard.set(result.data.token, forKey: "token")
+//                if(self.success == true) {
+//                    print("로그인 성공!")
+//                    let VC = TabBarcontroller()
+//                    VC.modalPresentationStyle = .fullScreen
+//                    self.present(VC, animated: true, completion: nil)
+//                }
+            case.failure(let error):
+                print("통신 오류!\nCode:\(error._code), Message: \(error.errorDescription!)")
+            }
+        }
     }
     
-    
-//    AF.request("\(api)/api/signin",
-//               method: .post,
-//               parameters: ["id": loginId,
-//                            "password":(data: loginPw.data(using: .utf8)!),
-//
-//               encoding: JSONEncoding.default,
-//               headers: ["Content-Type": "application/json"]
-//    )
-//    .validate()
-//    .responseData { response in
-//        switch response.result {
-//        case .success:
-//            guard let value = response.value else { return }
-//            guard let result = try? JSONDecoder().decode(LoginData.self, from: value) else { return }
-//            UserDefaults.standard.set(result.data.token, forKey: "token")
-//        case .failure(let error):
-//            print("통신 오류!\nCode:\(error._code), Message: \(error.errorDescription!)")
-//        }
-//    }
-//
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        
         setup()
+        
     }
-
+    
     func setup() {
         [
             logolb, idlb, idTextField, pwTextField, pwlb, pwTextField, signinBt
