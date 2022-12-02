@@ -67,10 +67,10 @@ class SigninVC: UIViewController {
         let id = idTextField.text!
         let pw = pwTextField.text!
         print(id, pw)
-        AF.request("\(api)/api/signin",
+        AF.request("\(api)/signin.do",
                    method: .post,
-                   parameters: ["id": id,
-                                "password": SHA512.hash(data: pw.data(using: .utf8)!).compactMap{ String(format: "%02x", $0) }.joined()],
+                   parameters: ["name": id,
+                                "password": pw],
 //                   SHA256.hash(data: Data(password.utf8))
                    encoding : JSONEncoding.default,
                    headers: ["Content-Type": "application/json"]
