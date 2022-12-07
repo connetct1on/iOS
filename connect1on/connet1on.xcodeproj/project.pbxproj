@@ -11,6 +11,7 @@
 		858024B62937806C003BBF05 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858024B52937806C003BBF05 /* API.swift */; };
 		858024B829378E4E003BBF05 /* signin API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858024B729378E4E003BBF05 /* signin API.swift */; };
 		858024F02938D483003BBF05 /* SetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858024EF2938D483003BBF05 /* SetVC.swift */; };
+		859AF2AE293F98CA001155E6 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859AF2AD293F98CA001155E6 /* File.swift */; };
 		859E1F6C292129CA00571D79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859E1F6B292129CA00571D79 /* AppDelegate.swift */; };
 		859E1F6E292129CA00571D79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859E1F6D292129CA00571D79 /* SceneDelegate.swift */; };
 		859E1F70292129CA00571D79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859E1F6F292129CA00571D79 /* ViewController.swift */; };
@@ -49,6 +50,7 @@
 		858024B52937806C003BBF05 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		858024B729378E4E003BBF05 /* signin API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "signin API.swift"; sourceTree = "<group>"; };
 		858024EF2938D483003BBF05 /* SetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetVC.swift; sourceTree = "<group>"; };
+		859AF2AD293F98CA001155E6 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = File.swift; path = "/Users/choesihun/Documents/GitHub/iOS/connect1on/connect1on/New Group/message/File.swift"; sourceTree = "<absolute>"; };
 		859E1F68292129CA00571D79 /* connect1on.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = connect1on.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		859E1F6B292129CA00571D79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		859E1F6D292129CA00571D79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,15 @@
 			path = ProfileView;
 			sourceTree = "<group>";
 		};
+		859AF2AB293F98AE001155E6 /* message */ = {
+			isa = PBXGroup;
+			children = (
+				859AF2AD293F98CA001155E6 /* File.swift */,
+				8510C2FF292F81950093BD1A /* MessageVC.swift */,
+			);
+			path = message;
+			sourceTree = "<group>";
+		};
 		859E1F5F292129CA00571D79 = {
 			isa = PBXGroup;
 			children = (
@@ -145,7 +156,7 @@
 				859E1F9C2921306000571D79 /* TabBarcontroller.swift */,
 				859E1FA02921314400571D79 /* QuestionVC.swift */,
 				859E1F9E2921307F00571D79 /* HomeVC.swift */,
-				8510C2FF292F81950093BD1A /* MessageVC.swift */,
+				859AF2AB293F98AE001155E6 /* message */,
 				858024F12938D48D003BBF05 /* ProfileView */,
 			);
 			path = "New Group";
@@ -362,6 +373,7 @@
 				859E1F6C292129CA00571D79 /* AppDelegate.swift in Sources */,
 				859E1F9F2921307F00571D79 /* HomeVC.swift in Sources */,
 				859E1F6E292129CA00571D79 /* SceneDelegate.swift in Sources */,
+				859AF2AE293F98CA001155E6 /* File.swift in Sources */,
 				8510C300292F81950093BD1A /* MessageVC.swift in Sources */,
 				859E1F9D2921306000571D79 /* TabBarcontroller.swift in Sources */,
 			);

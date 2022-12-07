@@ -14,6 +14,7 @@ class HomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupNavigationBar()
         view.backgroundColor = .systemBackground
         setupNavigationBarItem()
@@ -36,7 +37,6 @@ class HomeVC: UIViewController {
             target: self,
             action: #selector(didTabMassageButton)
         )
-        //navigationItem.title = "navigationBarTitle"
         navigationItem.rightBarButtonItem = massageButton
     }
     @objc func didTabMassageButton() {

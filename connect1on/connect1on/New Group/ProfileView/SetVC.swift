@@ -8,7 +8,7 @@
 import UIKit
 class SetVC: UIViewController {
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground

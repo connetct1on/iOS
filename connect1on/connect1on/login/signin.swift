@@ -85,12 +85,6 @@ class SigninVC: UIViewController {
 //                guard let value = response.value else { return }
 //                guard let result = try? JSONDecoder().decode(LoginData.self, from: value) else { return }
 //                UserDefaults.standard.set(result.data.token, forKey: "token")
-//                if(self.success == true) {
-//                    print("로그인 성공!")
-//                    let VC = TabBarcontroller()
-//                    VC.modalPresentationStyle = .fullScreen
-//                    self.present(VC, animated: true, completion: nil)
-//                }
             case.failure(let error):
                 print("통신 오류!\nCode:\(error._code), Message: \(error.errorDescription!)")
             }

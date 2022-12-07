@@ -42,6 +42,5 @@ private func setupNavigationBarItem() {
     let VC = SetVC()
     VC.modalPresentationStyle = .fullScreen
     present(VC, animated: true, completion: nil)
-
-}
+    }
 }

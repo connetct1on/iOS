@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/choesihun/Documents/GitHub/iOS/connect1on/connect1on/New Group/message/File.swift">
+   </FileRef>
+   <FileRef
       location = "group:/Users/choesihun/Documents/GitHub/iOS/connect1on/connet1on.xcodeproj">
    </FileRef>
    <FileRef
