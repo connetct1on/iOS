@@ -67,11 +67,10 @@ class SigninVC: UIViewController {
         let id = idTextField.text!
         let pw = pwTextField.text!
         print(id, pw)
-        AF.request("\(api)/signin.do",
+        AF.request("\(api)/api/user/signin.do",
                    method: .post,
-                   parameters: ["name": id,
+                   parameters: ["empnum": id,
                                 "password": pw],
-//                   SHA256.hash(data: Data(password.utf8))
                    encoding : JSONEncoding.default,
                    headers: ["Content-Type": "application/json"]
         )
@@ -82,9 +81,9 @@ class SigninVC: UIViewController {
                 let VC = TabBarcontroller()
                 VC.modalPresentationStyle = .fullScreen
                 self.present(VC, animated: true, completion: nil)
-//                guard let value = response.value else { return }
-//                guard let result = try? JSONDecoder().decode(LoginData.self, from: value) else { return }
-//                UserDefaults.standard.set(result.data.token, forKey: "token")
+                guard let value = response.value else { return }
+                guard let result = try? JSONDecoder().decode(LoginData.self, from: value) else { return }
+                UserDefaults.standard.set(result.data.token, forKey: "token")
             case.failure(let error):
                 print("통신 오류!\nCode:\(error._code), Message: \(error.errorDescription!)")
             }

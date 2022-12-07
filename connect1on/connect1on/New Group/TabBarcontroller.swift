@@ -18,9 +18,9 @@ class TabBarcontroller: UITabBarController {
         self.tabBar.unselectedItemTintColor = .lightGray
         
         
-        let sarchTabBar = UIViewController()
-        sarchTabBar.tabBarItem.title = ""
-        sarchTabBar.tabBarItem.image = UIImage(systemName: "questionmark")
+        let questionTabBar = UIViewController()
+        questionTabBar.tabBarItem.title = ""
+        questionTabBar.tabBarItem.image = UIImage(systemName: "questionmark")
         let homeTabBar = UINavigationController(rootViewController: HomeVC())
         homeTabBar.tabBarItem.title = ""
         homeTabBar.tabBarItem.image = UIImage(systemName: "house")
@@ -28,7 +28,7 @@ class TabBarcontroller: UITabBarController {
         profileTabBar.tabBarItem.title = ""
         profileTabBar.tabBarItem.image = UIImage(systemName: "person")
         
-        viewControllers = [sarchTabBar, homeTabBar, profileTabBar]
+        viewControllers = [questionTabBar, homeTabBar, profileTabBar]
     }
     
 }

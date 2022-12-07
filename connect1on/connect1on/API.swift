@@ -6,5 +6,5 @@
 //
 
 import Foundation
-public let api = "http://192.168.245.52:8080"
+public let api = "http://10.80.163.70:8080"
 

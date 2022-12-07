@@ -95,15 +95,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		858024F12938D48D003BBF05 /* ProfileView */ = {
-			isa = PBXGroup;
-			children = (
-				85E2EEA729266121000636BC /* profile.swift */,
-				858024EF2938D483003BBF05 /* SetVC.swift */,
-			);
-			path = ProfileView;
-			sourceTree = "<group>";
-		};
 		859AF2AB293F98AE001155E6 /* message */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,8 +147,9 @@
 				859E1F9C2921306000571D79 /* TabBarcontroller.swift */,
 				859E1FA02921314400571D79 /* QuestionVC.swift */,
 				859E1F9E2921307F00571D79 /* HomeVC.swift */,
+				85E2EEA729266121000636BC /* profile.swift */,
+				858024EF2938D483003BBF05 /* SetVC.swift */,
 				859AF2AB293F98AE001155E6 /* message */,
-				858024F12938D48D003BBF05 /* ProfileView */,
 			);
 			path = "New Group";
 			sourceTree = "<group>";
