@@ -15,7 +15,7 @@ class ProfileVC: UIViewController {
         super.viewDidLoad()
         setupNavigationBar()
         view.backgroundColor = .systemBackground
-//        setupNavigationBarItem()
+        setupNavigationBarItem()
         self.navigationController?.navigationBar.tintColor = .white
     }
     private func setupNavigationBar() {
@@ -40,7 +40,6 @@ private func setupNavigationBarItem() {
 @objc func didTabSetButton() {
     print("didTabSetButton")
     let VC = SetVC()
-    VC.modalPresentationStyle = .fullScreen
-    present(VC, animated: true, completion: nil)
+       self.navigationController?.pushViewController(VC, animated: true)
     }
 }

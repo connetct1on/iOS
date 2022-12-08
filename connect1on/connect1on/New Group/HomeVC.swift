@@ -18,7 +18,7 @@ class HomeVC: UIViewController {
         setupNavigationBar()
         view.backgroundColor = .systemBackground
         setupNavigationBarItem()
-        self.navigationController?.navigationBar.tintColor = .white
+//        self.navigationController?.navigationBar.tintColor = .white
     }
     
     private func setupNavigationBar() {
