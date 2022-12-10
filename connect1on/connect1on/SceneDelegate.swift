@@ -15,6 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = SigninVC()
         window?.makeKeyAndVisible()
+   
         }
 
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.

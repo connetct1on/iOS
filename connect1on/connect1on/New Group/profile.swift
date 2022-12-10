@@ -17,7 +17,9 @@ class ProfileVC: UIViewController {
         view.backgroundColor = .systemBackground
         setupNavigationBarItem()
         self.navigationController?.navigationBar.tintColor = .white
+
     }
+    
     private func setupNavigationBar() {
         let navigationBarAppearance = UINavigationBarAppearance()
         navigationBarAppearance.backgroundColor = UIColor(red: 10.0/255, green:0.0/255, blue:114.0/255, alpha: 1)
@@ -37,9 +39,10 @@ private func setupNavigationBarItem() {
 //    navigationItem.title = "프로필"
     navigationItem.rightBarButtonItem = setButton
 }
-@objc func didTabSetButton() {
-    print("didTabSetButton")
-    let VC = SetVC()
-       self.navigationController?.pushViewController(VC, animated: true)
+    @objc func didTabSetButton() {
+        print("didTabSetButton")
+        let VC = SetVC()
+        VC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(VC, animated: true)
     }
 }
