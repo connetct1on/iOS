@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 class SetVC: UIViewController {
     
     
@@ -20,6 +21,6 @@ class SetVC: UIViewController {
     
     private func setupNavigationItem() {
         navigationItem.title = "설정"
-        navigationController?.navigationBar.titleTextAttributes = [. foregroundColor: UIColor.orange]
+        navigationController?.navigationBar.titleTextAttributes = [. foregroundColor: UIColor.white]
     }
 }

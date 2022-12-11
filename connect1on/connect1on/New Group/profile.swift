@@ -44,5 +44,6 @@ private func setupNavigationBarItem() {
         let VC = SetVC()
         VC.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(VC, animated: true)
+        
     }
 }
