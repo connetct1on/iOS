@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class Homepage : UIViewController {
+class HomepageWebView : UIViewController {
     
     
     override func viewDidLoad() {

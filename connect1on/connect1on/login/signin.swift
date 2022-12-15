@@ -115,7 +115,7 @@ class SigninVC: UIViewController {
         }
         idTextField.snp.makeConstraints {
             $0.top.equalTo(logolb).offset(150)
-            $0.bottom.equalTo(logolb).offset(100)
+            $0.bottom.equalTo(logolb).offset(110)
             $0.left.equalToSuperview().offset(70)
             $0.right.equalToSuperview().offset(-70)
         }
@@ -126,14 +126,14 @@ class SigninVC: UIViewController {
             $0.right.equalToSuperview().offset(-70)
         }
         pwTextField.snp.makeConstraints {
-            $0.top.equalTo(logolb).offset(250)
-            $0.bottom.equalTo(logolb).offset(200)
+            $0.top.equalTo(logolb).offset(230)
+            $0.bottom.equalTo(logolb).offset(190)
             $0.left.equalToSuperview().offset(70)
             $0.right.equalToSuperview().offset(-70)
         }
         signinBt.snp.makeConstraints {
-            $0.top.equalTo(logolb).offset(350)
-            $0.bottom.equalTo(logolb).offset(300)
+            $0.top.equalTo(logolb).offset(310)
+            $0.bottom.equalTo(logolb).offset(270)
             $0.left.equalToSuperview().offset(70)
             $0.right.equalToSuperview().offset(-70)
         }

@@ -10,7 +10,7 @@ import SnapKit
 import Then
 
 class ProfileVC: UIViewController {
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
@@ -34,9 +34,7 @@ private func setupNavigationBarItem() {
         image: UIImage(systemName: "gearshape.fill"),
         style: .plain,
         target: self,
-        action: #selector(didTabSetButton)
-    )
-//    navigationItem.title = "프로필"
+        action: #selector(didTabSetButton))
     navigationItem.rightBarButtonItem = setButton
 }
     @objc func didTabSetButton() {
