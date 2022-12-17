@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8510C300292F81950093BD1A /* MessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8510C2FF292F81950093BD1A /* MessageVC.swift */; };
-		8534A57D2945D36500A78474 /* HomepageWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8534A57C2945D36500A78474 /* HomepageWebView.swift */; };
+		8531E1A1294D042200C78AAF /* FacilitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531E1A0294D042200C78AAF /* FacilitiesVC.swift */; };
+		8531E1A3294D049C00C78AAF /* EventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531E1A2294D049C00C78AAF /* EventVC.swift */; };
 		858024B62937806C003BBF05 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858024B52937806C003BBF05 /* API.swift */; };
 		858024B829378E4E003BBF05 /* signin API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858024B729378E4E003BBF05 /* signin API.swift */; };
 		858024F02938D483003BBF05 /* SetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858024EF2938D483003BBF05 /* SetVC.swift */; };
@@ -48,7 +49,8 @@
 		09DC7C6A8130F470F97542FB /* Pods-connect1on.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-connect1on.debug.xcconfig"; path = "Target Support Files/Pods-connect1on/Pods-connect1on.debug.xcconfig"; sourceTree = "<group>"; };
 		2C7DF6081963084958DA47CB /* Pods-connect1on.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-connect1on.release.xcconfig"; path = "Target Support Files/Pods-connect1on/Pods-connect1on.release.xcconfig"; sourceTree = "<group>"; };
 		8510C2FF292F81950093BD1A /* MessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageVC.swift; sourceTree = "<group>"; };
-		8534A57C2945D36500A78474 /* HomepageWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageWebView.swift; sourceTree = "<group>"; };
+		8531E1A0294D042200C78AAF /* FacilitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilitiesVC.swift; sourceTree = "<group>"; };
+		8531E1A2294D049C00C78AAF /* EventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventVC.swift; sourceTree = "<group>"; };
 		858024B52937806C003BBF05 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		858024B729378E4E003BBF05 /* signin API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "signin API.swift"; sourceTree = "<group>"; };
 		858024EF2938D483003BBF05 /* SetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetVC.swift; sourceTree = "<group>"; };
@@ -97,6 +99,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8531E19F294CFDDB00C78AAF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				859E1F9E2921307F00571D79 /* HomeVC.swift */,
+				8531E1A0294D042200C78AAF /* FacilitiesVC.swift */,
+				8531E1A2294D049C00C78AAF /* EventVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		859AF2AB293F98AE001155E6 /* message */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,10 +160,9 @@
 			children = (
 				859E1F9C2921306000571D79 /* TabBarcontroller.swift */,
 				859E1FA02921314400571D79 /* QuestionVC.swift */,
-				859E1F9E2921307F00571D79 /* HomeVC.swift */,
-				8534A57C2945D36500A78474 /* HomepageWebView.swift */,
 				85E2EEA729266121000636BC /* profile.swift */,
 				858024EF2938D483003BBF05 /* SetVC.swift */,
+				8531E19F294CFDDB00C78AAF /* Home */,
 				859AF2AB293F98AE001155E6 /* message */,
 			);
 			path = TabBar;
@@ -368,8 +379,9 @@
 				85E2EEAB29266232000636BC /* signin.swift in Sources */,
 				859E1F6C292129CA00571D79 /* AppDelegate.swift in Sources */,
 				859E1F9F2921307F00571D79 /* HomeVC.swift in Sources */,
-				8534A57D2945D36500A78474 /* HomepageWebView.swift in Sources */,
 				859E1F6E292129CA00571D79 /* SceneDelegate.swift in Sources */,
+				8531E1A1294D042200C78AAF /* FacilitiesVC.swift in Sources */,
+				8531E1A3294D049C00C78AAF /* EventVC.swift in Sources */,
 				8510C300292F81950093BD1A /* MessageVC.swift in Sources */,
 				859E1F9D2921306000571D79 /* TabBarcontroller.swift in Sources */,
 			);

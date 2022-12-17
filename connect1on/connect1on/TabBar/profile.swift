@@ -36,6 +36,7 @@ private func setupNavigationBarItem() {
         target: self,
         action: #selector(didTabSetButton))
     navigationItem.rightBarButtonItem = setButton
+    
 }
     @objc func didTabSetButton() {
         print("didTabSetButton")

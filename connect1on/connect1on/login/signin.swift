@@ -32,7 +32,7 @@ class SigninVC: UIViewController {
         //$0.backgroundColor = UIColor(red: 220.0 / 255, green: 220.0 / 225, blue: 220.0 / 225, alpha: 0.3)
     }
     lazy var idTextField = UITextField().then {
-        $0.placeholder = "아이디를 입력해주세요"
+        $0.placeholder = "  아이디를 입력해주세요"
         $0.font = .systemFont(ofSize: 14.0, weight: .medium)
         $0.autocapitalizationType = .none
         $0.backgroundColor = UIColor(red: 220.0/255, green: 220.0/255, blue: 220.0/255, alpha: 1)
@@ -43,7 +43,7 @@ class SigninVC: UIViewController {
         $0.font = UIFont(name: "GangwonEduAll-OTFBold", size: 20)
     }
     lazy var pwTextField = UITextField().then {
-        $0.placeholder = "비밀번호를 입력해주세요"
+        $0.placeholder = "  비밀번호를 입력해주세요"
         $0.font = .systemFont(ofSize: 14.0, weight: .medium)
         $0.autocapitalizationType = .none
         $0.isSecureTextEntry = true
@@ -56,12 +56,6 @@ class SigninVC: UIViewController {
         $0.layer.cornerRadius = 20
         $0.addTarget(self, action: #selector(TabsigninBt), for: .touchUpInside)
     }
-    //    @objc func TabsigninBt() {
-    //        let VC = TabBarcontroller()
-    //        VC.modalPresentationStyle = .fullScreen
-    //        present(VC, animated: true, completion: nil)
-    //    }
-    
     @objc func TabsigninBt() {
         let id = idTextField.text!
         let pw = pwTextField.text!
