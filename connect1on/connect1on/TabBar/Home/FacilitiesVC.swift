@@ -6,9 +6,14 @@
 //
 
 import UIKit
+import Then
 
 class FacilitiesVC: UIViewController {
-
+//    let image = UIImageView().then {
+//        $0.image =
+//
+//
+//    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
