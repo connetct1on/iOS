@@ -11,8 +11,8 @@ import SnapKit
 
 class EventVC: UIViewController {
 //    let explanation = UILabel().then {
-////        $0.
-//        
+//        $0.
+//
 //    }
     let image = UIImageView().then {
         $0.image = UIImage(named: "ground")
@@ -30,8 +30,8 @@ class EventVC: UIViewController {
             image
         ].forEach{ self.view.addSubview($0) }
         image.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(220)
-            $0.bottom.equalToSuperview().offset(-220)
+            $0.top.equalToSuperview().offset(170)
+            $0.bottom.equalToSuperview().offset(-270)
             $0.left.equalToSuperview().offset(0)
             $0.right.equalToSuperview().offset(0)
             

@@ -7,16 +7,45 @@
 
 import UIKit
 import Then
+import SnapKit
 
 class FacilitiesVC: UIViewController {
-//    let image = UIImageView().then {
-//        $0.image =
-//
-//
-//    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    let label = UILabel().then {
+        $0.text = "운동장"
+        $0.font = UIFont(name: "GangwonEduAll-OTFBold", size:60)
+        $0.font.withSize(60)
+        $0.textAlignment = .center //가운데 정렬
         
     }
-
+   let image = UIImageView().then {
+       $0.image = UIImage(named: "ground")
+    
 }
+
+override func viewDidLoad() {
+    super.viewDidLoad()
+    view.backgroundColor = .systemBackground
+    setup()
+    
+}
+func setup() {
+    [
+        label, image
+    ].forEach{ self.view.addSubview($0) }
+    label.snp.makeConstraints {
+        $0.top.equalToSuperview().offset(100)
+        $0.bottom.equalTo(image.snp.top).offset(-5)
+        $0.left.equalToSuperview().offset(0)
+        $0.right.equalToSuperview().offset(0)
+    }
+    image.snp.makeConstraints {
+        $0.top.equalToSuperview().offset(170)
+        $0.bottom.equalToSuperview().offset(-270)
+        $0.left.equalToSuperview().offset(0)
+        $0.right.equalToSuperview().offset(0)
+    }
+    
+}
+}
+
