@@ -60,7 +60,7 @@ class SigninVC: UIViewController {
         let id = idTextField.text!
         let pw = pwTextField.text!
         print(id, pw)
-//        AF.request("\(api)/api/user/signin.do",
+//        AF.request("\(api)/user/signin.do",
 //                   method: .post,
 //                   parameters: ["empnum": id,
 //                                "password": pw],
