@@ -11,12 +11,11 @@ import SnapKit
 
 class EventVC: UIViewController {
     let navigationBar = UINavigationBar().then {
-        $0.backgroundColor = UIColor(red:  230.0/255, green:230.0/255, blue:230.0/255, alpha: 1)
+        $0.backgroundColor = UIColor(red: 230.0/255, green: 230.0/255, blue: 230.0/255, alpha: 1)
     }
     let line = UIView().then {
         $0.layer.borderWidth = 1
-        $0.layer.borderColor = UIColor(red: 0.0/0, green: 0.0/0, blue: 0.0/0, alpha: 1).cgColor
-        
+        $0.layer.borderColor = UIColor(red: 200.0/255, green: 200.0/255, blue: 200.0/255, alpha: 1).cgColor
     }
     let explanation = UILabel().then {
         $0.text = "해커톤"
@@ -25,9 +24,13 @@ class EventVC: UIViewController {
         $0.textAlignment = .center //가운데 정렬
         
     }
+//    let pageControl = UIPageControl().then {
+//
+//
+//    }
     let image = UIImageView().then {
         $0.image = UIImage(named: "ground")
-        
+         
     }
     
     override func viewDidLoad() {

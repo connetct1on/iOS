@@ -82,9 +82,17 @@ class HomeVC: UIViewController {
     }
     
     @objc private func didTabMessageButton() {
+        print("1")
         let VC = MessageTableViewVC()
+        print("2")
         VC.hidesBottomBarWhenPushed = true
+        print("3")
         self.navigationController?.pushViewController(VC, animated: true)
+        print("4")
+        
+        
+        
+        
         
     }
     

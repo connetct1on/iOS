@@ -9,9 +9,17 @@ import UIKit
 import Then
 import SnapKit
 
+
 class FacilitiesVC: UIViewController {
+    let navigationBar = UINavigationBar().then {
+        $0.backgroundColor = UIColor(red: 230.0/255, green: 230.0/255, blue: 230.0/255, alpha: 1)
+    }
+    let line = UIView().then {
+        $0.layer.borderWidth = 1
+        $0.layer.borderColor = UIColor(red: 200.0/255, green: 200.0/255, blue: 200.0/255, alpha: 1).cgColor
+    }
     
-    let label = UILabel().then {
+    let explanation = UILabel().then {
         $0.text = "운동장"
         $0.font = UIFont(name: "GangwonEduAll-OTFBold", size:60)
         $0.font.withSize(60)
@@ -31,9 +39,21 @@ override func viewDidLoad() {
 }
 func setup() {
     [
-        label, image
+        navigationBar, line, explanation, image
     ].forEach{ self.view.addSubview($0) }
-    label.snp.makeConstraints {
+    navigationBar.snp.makeConstraints {
+        $0.top.equalToSuperview().offset(0)
+        $0.bottom.equalTo(explanation).offset(-110)
+        $0.left.equalToSuperview().offset(0)
+        $0.right.equalToSuperview().offset(0)
+    }
+    line.snp.makeConstraints {
+        $0.top.equalTo(navigationBar.snp.bottom).offset(0)
+        $0.bottom.equalTo(navigationBar.snp.bottom).offset(1)
+        $0.left.equalToSuperview().offset(0)
+        $0.right.equalToSuperview().offset(0)
+    }
+    explanation.snp.makeConstraints {
         $0.top.equalToSuperview().offset(100)
         $0.bottom.equalTo(image.snp.top).offset(-5)
         $0.left.equalToSuperview().offset(0)
