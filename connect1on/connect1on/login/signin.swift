@@ -22,7 +22,7 @@ class SigninVC: UIViewController {
     let logolb = UILabel().then {
         $0.text = "ALT"
         $0.font = UIFont(name: "GangwonEduAll-OTFBold", size:150)
-        $0.font.withSize(60)
+        $0.font.withSize(58)
         $0.textAlignment = .center //가운데 정렬
         //$0.backgroundColor = UIColor(red: 180.0 / 255, green: 180.0 / 255, blue: 180.0 / 255, alpha: 1)
     }
@@ -97,7 +97,7 @@ class SigninVC: UIViewController {
         }
         logolb.snp.makeConstraints {
             $0.top.equalToSuperview().offset(150)
-            $0.bottom.equalToSuperview().offset(-600)
+            $0.bottom.equalToSuperview().offset(-580)
             $0.left.equalToSuperview().offset(70)
             $0.right.equalToSuperview().offset(-70)
         }
@@ -109,7 +109,7 @@ class SigninVC: UIViewController {
         }
         idTextField.snp.makeConstraints {
             $0.top.equalTo(logolb).offset(150)
-            $0.bottom.equalTo(logolb).offset(110)
+            $0.bottom.equalTo(logolb).offset(90)
             $0.left.equalToSuperview().offset(70)
             $0.right.equalToSuperview().offset(-70)
         }
@@ -121,13 +121,13 @@ class SigninVC: UIViewController {
         }
         pwTextField.snp.makeConstraints {
             $0.top.equalTo(logolb).offset(230)
-            $0.bottom.equalTo(logolb).offset(190)
+            $0.bottom.equalTo(logolb).offset(170)
             $0.left.equalToSuperview().offset(70)
             $0.right.equalToSuperview().offset(-70)
         }
         signinBt.snp.makeConstraints {
             $0.top.equalTo(logolb).offset(310)
-            $0.bottom.equalTo(logolb).offset(270)
+            $0.bottom.equalTo(logolb).offset(250)
             $0.left.equalToSuperview().offset(70)
             $0.right.equalToSuperview().offset(-70)
         }
