@@ -9,7 +9,8 @@ import SnapKit
 import Then
 import UIKit
 import Alamofire
-import Messages
+import MessageKit
+import InputBarAccessoryView
 
 class MessageVC: UIViewController {
 

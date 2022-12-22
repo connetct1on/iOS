@@ -56,6 +56,15 @@ class SigninVC: UIViewController {
         $0.layer.cornerRadius = 20
         $0.addTarget(self, action: #selector(TabsigninBt), for: .touchUpInside)
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .systemBackground
+        setup()
+        
+    }
+}
+extension SigninVC {
     @objc func TabsigninBt() {
         let id = idTextField.text!
         let pw = pwTextField.text!
@@ -81,13 +90,6 @@ class SigninVC: UIViewController {
 //                print("통신 오류!\nCode:\(error._code), Message: \(error.errorDescription!)")
 //            }
 //        }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemBackground
-        setup()
-        
     }
     
     func setup() {

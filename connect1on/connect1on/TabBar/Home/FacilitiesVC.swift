@@ -26,17 +26,19 @@ class FacilitiesVC: UIViewController {
         $0.textAlignment = .center //가운데 정렬
         
     }
-   let image = UIImageView().then {
-       $0.image = UIImage(named: "ground")
+    let image = UIImageView().then {
+        $0.image = UIImage(named: "ground")
+        
+    }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .systemBackground
+        setup()
+        
+    }
 }
-
-override func viewDidLoad() {
-    super.viewDidLoad()
-    view.backgroundColor = .systemBackground
-    setup()
-    
-}
+extension FacilitiesVC {
 func setup() {
     [
         navigationBar, line, explanation, image

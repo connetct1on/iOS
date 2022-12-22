@@ -10,15 +10,17 @@ import SnapKit
 import Then
 
 class ProfileVC: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
         view.backgroundColor = .systemBackground
         setupNavigationBarItem()
         self.navigationController?.navigationBar.tintColor = .white
-
+        
     }
+}
+extension ProfileVC {
     
     private func setupNavigationBar() {
         let navigationBarAppearance = UINavigationBarAppearance()

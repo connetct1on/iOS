@@ -13,7 +13,7 @@ class HomeVC: UIViewController {
     
     let homePageBt = UIButton().then {
         $0.setImage(UIImage(named: "dgsw_logo"), for: .normal)
-        $0.backgroundColor = UIColor(red:  10.0/255, green:0.0/255, blue:114.0/255, alpha: 1)
+        $0.backgroundColor = UIColor(red: 10.0/255, green:0.0/255, blue:114.0/255, alpha: 1)
         $0.contentVerticalAlignment = .fill
         $0.contentHorizontalAlignment = .fill
         $0.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
@@ -23,7 +23,7 @@ class HomeVC: UIViewController {
     
     let schoolFacilitiesBt = UIButton().then {
         $0.setImage(UIImage(named: "playground"), for: .normal)
-        $0.backgroundColor = UIColor(red:  10.0/255, green:0.0/255, blue:114.0/255, alpha: 1)
+        $0.backgroundColor = UIColor(red: 10.0/255, green:0.0/255, blue:114.0/255, alpha: 1)
         $0.layer.cornerRadius = 25
         $0.contentVerticalAlignment = .fill
         $0.contentHorizontalAlignment = .fill
@@ -34,7 +34,7 @@ class HomeVC: UIViewController {
     
     let schoolEventBt = UIButton().then {
         $0.setImage(UIImage(named: "playground"), for: .normal)
-        $0.backgroundColor = UIColor(red:  10.0/255, green:0.0/255, blue:114.0/255, alpha: 1)
+        $0.backgroundColor = UIColor(red: 10.0/255, green:0.0/255, blue:114.0/255, alpha: 1)
         $0.layer.cornerRadius = 25
         $0.contentVerticalAlignment = .fill
         $0.contentHorizontalAlignment = .fill
@@ -42,6 +42,17 @@ class HomeVC: UIViewController {
         $0.addTarget(self, action: #selector(didTabEventBt), for: .touchUpInside)
         
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup()
+        setupNavigationBar()
+        view.backgroundColor = .systemBackground
+        setupNavigationBarItem()
+        self.navigationController?.navigationBar.tintColor = .white
+    }
+}
+extension HomeVC{
     @objc func didTabLogoBt() {
         print("didTabLogoBt")
         let url = URL(string: "https://www.dgsw.hs.kr")
@@ -59,8 +70,11 @@ class HomeVC: UIViewController {
         let VC = EventVC()
         self.present(VC, animated: true, completion: nil)
     }
-    
-    
+    @objc private func didTabMessageButton() {
+        let VC = MessageTableViewVC()
+        VC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(VC, animated: true)
+    }
     
     private func setupNavigationBar() {
         let navigationBar = UINavigationBarAppearance()
@@ -79,30 +93,6 @@ class HomeVC: UIViewController {
             action: #selector(didTabMessageButton)
         )
         navigationItem.rightBarButtonItem = messageButton
-    }
-    
-    @objc private func didTabMessageButton() {
-        print("1")
-        let VC = MessageTableViewVC()
-        print("2")
-        VC.hidesBottomBarWhenPushed = true
-        print("3")
-        self.navigationController?.pushViewController(VC, animated: true)
-        print("4")
-        
-        
-        
-        
-        
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setup()
-        setupNavigationBar()
-        view.backgroundColor = .systemBackground
-        setupNavigationBarItem()
-        self.navigationController?.navigationBar.tintColor = .white
     }
     func setup() {
         [
@@ -130,5 +120,5 @@ class HomeVC: UIViewController {
             
         }
     }
-    
 }
+

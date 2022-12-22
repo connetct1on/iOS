@@ -15,10 +15,10 @@ class SetVC: UIViewController {
         view.backgroundColor = .systemBackground
         self.navigationController?.navigationBar.tintColor = .white
         setupNavigationItem()
-       
+        
     }
-    
-    
+}
+extension SetVC {
     private func setupNavigationItem() {
         navigationItem.title = "설정"
         navigationController?.navigationBar.titleTextAttributes = [. foregroundColor: UIColor.white]

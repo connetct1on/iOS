@@ -24,22 +24,23 @@ class EventVC: UIViewController {
         $0.textAlignment = .center //가운데 정렬
         
     }
-//    let pageControl = UIPageControl().then {
-//
-//
-//    }
+    //    let pageControl = UIPageControl().then {
+    //
+    //
+    //    }
     let image = UIImageView().then {
         $0.image = UIImage(named: "ground")
-         
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        
         setup()
         
     }
+}
+extension EventVC {
     func setup() {
         [
             navigationBar, line, explanation, image
@@ -67,7 +68,6 @@ class EventVC: UIViewController {
             $0.bottom.equalToSuperview().offset(-270)
             $0.left.equalToSuperview().offset(0)
             $0.right.equalToSuperview().offset(0)
-            
         }
         
     }

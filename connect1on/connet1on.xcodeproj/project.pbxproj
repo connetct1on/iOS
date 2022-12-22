@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8505CDCB2953F9DF008E4932 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8505CDCA2953F9DF008E4932 /* MessageKit */; };
+		8505CDD129540046008E4932 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDD029540046008E4932 /* TableViewCell.swift */; };
+		8505CDDC29547362008E4932 /* MassageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDDB29547362008E4932 /* MassageAPI.swift */; };
 		8510C300292F81950093BD1A /* MessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8510C2FF292F81950093BD1A /* MessageVC.swift */; };
 		8531E1A1294D042200C78AAF /* FacilitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531E1A0294D042200C78AAF /* FacilitiesVC.swift */; };
 		8531E1A3294D049C00C78AAF /* EventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531E1A2294D049C00C78AAF /* EventVC.swift */; };
@@ -48,6 +51,8 @@
 /* Begin PBXFileReference section */
 		09DC7C6A8130F470F97542FB /* Pods-connect1on.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-connect1on.debug.xcconfig"; path = "Target Support Files/Pods-connect1on/Pods-connect1on.debug.xcconfig"; sourceTree = "<group>"; };
 		2C7DF6081963084958DA47CB /* Pods-connect1on.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-connect1on.release.xcconfig"; path = "Target Support Files/Pods-connect1on/Pods-connect1on.release.xcconfig"; sourceTree = "<group>"; };
+		8505CDD029540046008E4932 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		8505CDDB29547362008E4932 /* MassageAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MassageAPI.swift; path = connect1on/TabBar/message/MassageAPI.swift; sourceTree = SOURCE_ROOT; };
 		8510C2FF292F81950093BD1A /* MessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageVC.swift; sourceTree = "<group>"; };
 		8531E1A0294D042200C78AAF /* FacilitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilitiesVC.swift; sourceTree = "<group>"; };
 		8531E1A2294D049C00C78AAF /* EventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventVC.swift; sourceTree = "<group>"; };
@@ -79,6 +84,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2470652B00C1983FB5BEC8A /* Pods_connect1on.framework in Frameworks */,
+				8505CDCB2953F9DF008E4932 /* MessageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +105,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8505CDD72954569C008E4932 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8505CDD029540046008E4932 /* TableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8505CDDA295457AD008E4932 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				858024B729378E4E003BBF05 /* Signin API.swift */,
+				8505CDDB29547362008E4932 /* MassageAPI.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8531E19F294CFDDB00C78AAF /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +137,7 @@
 			children = (
 				859D1339294634590003634D /* MessageTableViewVC.swift */,
 				8510C2FF292F81950093BD1A /* MessageVC.swift */,
+				8505CDD72954569C008E4932 /* View */,
 			);
 			path = message;
 			sourceTree = "<group>";
@@ -145,6 +169,7 @@
 				859E1F6D292129CA00571D79 /* SceneDelegate.swift */,
 				859E1F6F292129CA00571D79 /* ViewController.swift */,
 				858024B52937806C003BBF05 /* API.swift */,
+				8505CDDA295457AD008E4932 /* Model */,
 				85E2EEA92926621B000636BC /* login */,
 				859E1F9B29212CBC00571D79 /* TabBar */,
 				859E1F74292129CB00571D79 /* Assets.xcassets */,
@@ -172,7 +197,6 @@
 			isa = PBXGroup;
 			children = (
 				85E2EEAA29266232000636BC /* Signin.swift */,
-				858024B729378E4E003BBF05 /* Signin API.swift */,
 			);
 			path = login;
 			sourceTree = "<group>";
@@ -212,6 +236,9 @@
 			dependencies = (
 			);
 			name = connect1on;
+			packageProductDependencies = (
+				8505CDCA2953F9DF008E4932 /* MessageKit */,
+			);
 			productName = connect1on;
 			productReference = 859E1F68292129CA00571D79 /* connect1on.app */;
 			productType = "com.apple.product-type.application";
@@ -284,6 +311,9 @@
 				Base,
 			);
 			mainGroup = 859E1F5F292129CA00571D79;
+			packageReferences = (
+				8505CDC92953F9DF008E4932 /* XCRemoteSwiftPackageReference "MessageKit" */,
+			);
 			productRefGroup = 859E1F69292129CA00571D79 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -370,12 +400,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				859E1F70292129CA00571D79 /* ViewController.swift in Sources */,
+				8505CDD129540046008E4932 /* TableViewCell.swift in Sources */,
 				85E2EEA829266121000636BC /* profile.swift in Sources */,
 				859E1FA12921314400571D79 /* QuestionVC.swift in Sources */,
 				859D133A294634590003634D /* MessageTableViewVC.swift in Sources */,
 				858024F02938D483003BBF05 /* SetVC.swift in Sources */,
 				858024B829378E4E003BBF05 /* Signin API.swift in Sources */,
 				858024B62937806C003BBF05 /* API.swift in Sources */,
+				8505CDDC29547362008E4932 /* MassageAPI.swift in Sources */,
 				85E2EEAB29266232000636BC /* Signin.swift in Sources */,
 				859E1F6C292129CA00571D79 /* AppDelegate.swift in Sources */,
 				859E1F9F2921307F00571D79 /* HomeVC.swift in Sources */,
@@ -717,6 +749,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8505CDC92953F9DF008E4932 /* XCRemoteSwiftPackageReference "MessageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MessageKit/MessageKit";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8505CDCA2953F9DF008E4932 /* MessageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8505CDC92953F9DF008E4932 /* XCRemoteSwiftPackageReference "MessageKit" */;
+			productName = MessageKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 859E1F60292129CA00571D79 /* Project object */;
 }
