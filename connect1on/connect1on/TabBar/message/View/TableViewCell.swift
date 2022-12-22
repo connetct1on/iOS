@@ -8,7 +8,7 @@ import UIKit
 import SnapKit
 import Then
 
-class ChannelTableViewCell: UITableViewCell {
+class MessageTableViewCell: UITableViewCell {
     lazy var userProfileImage: UIImageView = {
         let profileImage = UIImageView().then {
             $0.image = UIImage(named: "love")
