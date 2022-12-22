@@ -10,13 +10,14 @@
 		8505CDCB2953F9DF008E4932 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8505CDCA2953F9DF008E4932 /* MessageKit */; };
 		8505CDD129540046008E4932 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDD029540046008E4932 /* TableViewCell.swift */; };
 		8505CDDC29547362008E4932 /* MassageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDDB29547362008E4932 /* MassageAPI.swift */; };
+		8505CDDE295486A7008E4932 /* NSObjc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDDD295486A7008E4932 /* NSObjc.swift */; };
 		8510C300292F81950093BD1A /* MessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8510C2FF292F81950093BD1A /* MessageVC.swift */; };
 		8531E1A1294D042200C78AAF /* FacilitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531E1A0294D042200C78AAF /* FacilitiesVC.swift */; };
 		8531E1A3294D049C00C78AAF /* EventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531E1A2294D049C00C78AAF /* EventVC.swift */; };
 		858024B62937806C003BBF05 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858024B52937806C003BBF05 /* API.swift */; };
 		858024B829378E4E003BBF05 /* Signin API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858024B729378E4E003BBF05 /* Signin API.swift */; };
 		858024F02938D483003BBF05 /* SetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858024EF2938D483003BBF05 /* SetVC.swift */; };
-		859D133A294634590003634D /* MessageTableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859D1339294634590003634D /* MessageTableViewVC.swift */; };
+		859D133A294634590003634D /* StackViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859D1339294634590003634D /* StackViewVC.swift */; };
 		859E1F6C292129CA00571D79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859E1F6B292129CA00571D79 /* AppDelegate.swift */; };
 		859E1F6E292129CA00571D79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859E1F6D292129CA00571D79 /* SceneDelegate.swift */; };
 		859E1F70292129CA00571D79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859E1F6F292129CA00571D79 /* ViewController.swift */; };
@@ -53,13 +54,14 @@
 		2C7DF6081963084958DA47CB /* Pods-connect1on.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-connect1on.release.xcconfig"; path = "Target Support Files/Pods-connect1on/Pods-connect1on.release.xcconfig"; sourceTree = "<group>"; };
 		8505CDD029540046008E4932 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		8505CDDB29547362008E4932 /* MassageAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MassageAPI.swift; path = connect1on/TabBar/message/MassageAPI.swift; sourceTree = SOURCE_ROOT; };
+		8505CDDD295486A7008E4932 /* NSObjc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjc.swift; sourceTree = "<group>"; };
 		8510C2FF292F81950093BD1A /* MessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageVC.swift; sourceTree = "<group>"; };
 		8531E1A0294D042200C78AAF /* FacilitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilitiesVC.swift; sourceTree = "<group>"; };
 		8531E1A2294D049C00C78AAF /* EventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventVC.swift; sourceTree = "<group>"; };
 		858024B52937806C003BBF05 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		858024B729378E4E003BBF05 /* Signin API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Signin API.swift"; sourceTree = "<group>"; };
 		858024EF2938D483003BBF05 /* SetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetVC.swift; sourceTree = "<group>"; };
-		859D1339294634590003634D /* MessageTableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MessageTableViewVC.swift; path = /Users/choesihun/Documents/GitHub/iOS/connect1on/connect1on/TabBar/message/MessageTableViewVC.swift; sourceTree = "<absolute>"; };
+		859D1339294634590003634D /* StackViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StackViewVC.swift; path = /Users/choesihun/Documents/GitHub/iOS/connect1on/connect1on/TabBar/message/StackViewVC.swift; sourceTree = "<absolute>"; };
 		859E1F68292129CA00571D79 /* connect1on.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = connect1on.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		859E1F6B292129CA00571D79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		859E1F6D292129CA00571D79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				858024B729378E4E003BBF05 /* Signin API.swift */,
 				8505CDDB29547362008E4932 /* MassageAPI.swift */,
+				8505CDDD295486A7008E4932 /* NSObjc.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -135,7 +138,7 @@
 		859AF2AB293F98AE001155E6 /* message */ = {
 			isa = PBXGroup;
 			children = (
-				859D1339294634590003634D /* MessageTableViewVC.swift */,
+				859D1339294634590003634D /* StackViewVC.swift */,
 				8510C2FF292F81950093BD1A /* MessageVC.swift */,
 				8505CDD72954569C008E4932 /* View */,
 			);
@@ -403,7 +406,7 @@
 				8505CDD129540046008E4932 /* TableViewCell.swift in Sources */,
 				85E2EEA829266121000636BC /* profile.swift in Sources */,
 				859E1FA12921314400571D79 /* QuestionVC.swift in Sources */,
-				859D133A294634590003634D /* MessageTableViewVC.swift in Sources */,
+				859D133A294634590003634D /* StackViewVC.swift in Sources */,
 				858024F02938D483003BBF05 /* SetVC.swift in Sources */,
 				858024B829378E4E003BBF05 /* Signin API.swift in Sources */,
 				858024B62937806C003BBF05 /* API.swift in Sources */,
@@ -415,6 +418,7 @@
 				8531E1A1294D042200C78AAF /* FacilitiesVC.swift in Sources */,
 				8531E1A3294D049C00C78AAF /* EventVC.swift in Sources */,
 				8510C300292F81950093BD1A /* MessageVC.swift in Sources */,
+				8505CDDE295486A7008E4932 /* NSObjc.swift in Sources */,
 				859E1F9D2921306000571D79 /* TabBarcontroller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
