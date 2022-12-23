@@ -71,7 +71,7 @@ extension HomeVC{
         self.present(VC, animated: true, completion: nil)
     }
     @objc private func didTabMessageButton() {
-        let VC = MessageTableViewVC()
+        let VC = MessageStackViewVC()
         VC.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(VC, animated: true)
     }

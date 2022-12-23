@@ -11,6 +11,12 @@
 		8505CDD129540046008E4932 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDD029540046008E4932 /* TableViewCell.swift */; };
 		8505CDDC29547362008E4932 /* MassageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDDB29547362008E4932 /* MassageAPI.swift */; };
 		8505CDDE295486A7008E4932 /* NSObjc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDDD295486A7008E4932 /* NSObjc.swift */; };
+		8505CDE12954A038008E4932 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDE02954A038008E4932 /* Color.swift */; };
+		8505CDE32954A153008E4932 /* Message .swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDE22954A153008E4932 /* Message .swift */; };
+		8505CDE52954A19D008E4932 /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDE42954A19D008E4932 /* ImageItem.swift */; };
+		8505CDE72954A1E0008E4932 /* Sender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDE62954A1E0008E4932 /* Sender.swift */; };
+		8505CDEA2954A355008E4932 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDE92954A355008E4932 /* Mocks.swift */; };
+		8505CDEC295528B1008E4932 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDEB295528B1008E4932 /* ViewController.swift */; };
 		8510C300292F81950093BD1A /* MessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8510C2FF292F81950093BD1A /* MessageVC.swift */; };
 		8531E1A1294D042200C78AAF /* FacilitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531E1A0294D042200C78AAF /* FacilitiesVC.swift */; };
 		8531E1A3294D049C00C78AAF /* EventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531E1A2294D049C00C78AAF /* EventVC.swift */; };
@@ -20,7 +26,6 @@
 		859D133A294634590003634D /* StackViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859D1339294634590003634D /* StackViewVC.swift */; };
 		859E1F6C292129CA00571D79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859E1F6B292129CA00571D79 /* AppDelegate.swift */; };
 		859E1F6E292129CA00571D79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859E1F6D292129CA00571D79 /* SceneDelegate.swift */; };
-		859E1F70292129CA00571D79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859E1F6F292129CA00571D79 /* ViewController.swift */; };
 		859E1F75292129CB00571D79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 859E1F74292129CB00571D79 /* Assets.xcassets */; };
 		859E1F78292129CB00571D79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 859E1F76292129CB00571D79 /* LaunchScreen.storyboard */; };
 		859E1F9D2921306000571D79 /* TabBarcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859E1F9C2921306000571D79 /* TabBarcontroller.swift */; };
@@ -55,6 +60,13 @@
 		8505CDD029540046008E4932 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		8505CDDB29547362008E4932 /* MassageAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MassageAPI.swift; path = connect1on/TabBar/message/MassageAPI.swift; sourceTree = SOURCE_ROOT; };
 		8505CDDD295486A7008E4932 /* NSObjc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjc.swift; sourceTree = "<group>"; };
+		8505CDE02954A038008E4932 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		8505CDE22954A153008E4932 /* Message .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message .swift"; sourceTree = "<group>"; };
+		8505CDE42954A19D008E4932 /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
+		8505CDE62954A1E0008E4932 /* Sender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sender.swift; sourceTree = "<group>"; };
+		8505CDE92954A355008E4932 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		8505CDEB295528B1008E4932 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8505CDEF29552955008E4932 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8510C2FF292F81950093BD1A /* MessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageVC.swift; sourceTree = "<group>"; };
 		8531E1A0294D042200C78AAF /* FacilitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilitiesVC.swift; sourceTree = "<group>"; };
 		8531E1A2294D049C00C78AAF /* EventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventVC.swift; sourceTree = "<group>"; };
@@ -65,10 +77,8 @@
 		859E1F68292129CA00571D79 /* connect1on.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = connect1on.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		859E1F6B292129CA00571D79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		859E1F6D292129CA00571D79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		859E1F6F292129CA00571D79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		859E1F74292129CB00571D79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		859E1F77292129CB00571D79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		859E1F79292129CB00571D79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		859E1F7E292129CB00571D79 /* connect1onTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = connect1onTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		859E1F88292129CB00571D79 /* connect1onUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = connect1onUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		859E1F9C2921306000571D79 /* TabBarcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarcontroller.swift; sourceTree = "<group>"; };
@@ -120,9 +130,35 @@
 			children = (
 				858024B729378E4E003BBF05 /* Signin API.swift */,
 				8505CDDB29547362008E4932 /* MassageAPI.swift */,
-				8505CDDD295486A7008E4932 /* NSObjc.swift */,
+				8505CDE22954A153008E4932 /* Message .swift */,
+				8505CDE42954A19D008E4932 /* ImageItem.swift */,
+				8505CDE92954A355008E4932 /* Mocks.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8505CDDF2954A015008E4932 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8505CDDD295486A7008E4932 /* NSObjc.swift */,
+				8505CDE02954A038008E4932 /* Color.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8505CDE82954A1E3008E4932 /* Resousce */ = {
+			isa = PBXGroup;
+			children = (
+				858024B52937806C003BBF05 /* API.swift */,
+				8505CDE62954A1E0008E4932 /* Sender.swift */,
+				859E1F74292129CB00571D79 /* Assets.xcassets */,
+				859E1F76292129CB00571D79 /* LaunchScreen.storyboard */,
+				859E1F6B292129CA00571D79 /* AppDelegate.swift */,
+				859E1F6D292129CA00571D79 /* SceneDelegate.swift */,
+				8505CDEB295528B1008E4932 /* ViewController.swift */,
+				85E2EED32929439C000636BC /* Font.otf */,
+			);
+			path = Resousce;
 			sourceTree = "<group>";
 		};
 		8531E19F294CFDDB00C78AAF /* Home */ = {
@@ -168,17 +204,12 @@
 		859E1F6A292129CA00571D79 /* connect1on */ = {
 			isa = PBXGroup;
 			children = (
-				859E1F6B292129CA00571D79 /* AppDelegate.swift */,
-				859E1F6D292129CA00571D79 /* SceneDelegate.swift */,
-				859E1F6F292129CA00571D79 /* ViewController.swift */,
-				858024B52937806C003BBF05 /* API.swift */,
+				8505CDEF29552955008E4932 /* Info.plist */,
+				8505CDE82954A1E3008E4932 /* Resousce */,
+				8505CDDF2954A015008E4932 /* Extension */,
 				8505CDDA295457AD008E4932 /* Model */,
 				85E2EEA92926621B000636BC /* login */,
 				859E1F9B29212CBC00571D79 /* TabBar */,
-				859E1F74292129CB00571D79 /* Assets.xcassets */,
-				85E2EED32929439C000636BC /* Font.otf */,
-				859E1F76292129CB00571D79 /* LaunchScreen.storyboard */,
-				859E1F79292129CB00571D79 /* Info.plist */,
 			);
 			path = connect1on;
 			sourceTree = "<group>";
@@ -402,7 +433,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				859E1F70292129CA00571D79 /* ViewController.swift in Sources */,
 				8505CDD129540046008E4932 /* TableViewCell.swift in Sources */,
 				85E2EEA829266121000636BC /* profile.swift in Sources */,
 				859E1FA12921314400571D79 /* QuestionVC.swift in Sources */,
@@ -410,15 +440,21 @@
 				858024F02938D483003BBF05 /* SetVC.swift in Sources */,
 				858024B829378E4E003BBF05 /* Signin API.swift in Sources */,
 				858024B62937806C003BBF05 /* API.swift in Sources */,
+				8505CDEC295528B1008E4932 /* ViewController.swift in Sources */,
 				8505CDDC29547362008E4932 /* MassageAPI.swift in Sources */,
 				85E2EEAB29266232000636BC /* Signin.swift in Sources */,
 				859E1F6C292129CA00571D79 /* AppDelegate.swift in Sources */,
+				8505CDE12954A038008E4932 /* Color.swift in Sources */,
+				8505CDEA2954A355008E4932 /* Mocks.swift in Sources */,
+				8505CDE52954A19D008E4932 /* ImageItem.swift in Sources */,
 				859E1F9F2921307F00571D79 /* HomeVC.swift in Sources */,
 				859E1F6E292129CA00571D79 /* SceneDelegate.swift in Sources */,
 				8531E1A1294D042200C78AAF /* FacilitiesVC.swift in Sources */,
+				8505CDE72954A1E0008E4932 /* Sender.swift in Sources */,
 				8531E1A3294D049C00C78AAF /* EventVC.swift in Sources */,
 				8510C300292F81950093BD1A /* MessageVC.swift in Sources */,
 				8505CDDE295486A7008E4932 /* NSObjc.swift in Sources */,
+				8505CDE32954A153008E4932 /* Message .swift in Sources */,
 				859E1F9D2921306000571D79 /* TabBarcontroller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
