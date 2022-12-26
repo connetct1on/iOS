@@ -5,8 +5,7 @@
 //  Created by 최시훈 on 2022/12/22.
 //
 
-import Foundation
-
+import UIKit
 extension NSObject {
     static var className: String {
         return String(describing: self)

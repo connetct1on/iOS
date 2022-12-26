@@ -99,15 +99,15 @@ class MessageVC: MessagesViewController {
     }
     
     @objc private func didTapCameraButton() {
-        let picker = UIImagePickerController()
-        picker.delegate = self
+        let picture = UIImagePickerController()
+        picture.delegate = self
         
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            picker.sourceType = .camera
+            picture.sourceType = .camera
         } else {
-            picker.sourceType = .photoLibrary
+            picture.sourceType = .photoLibrary
         }
-        present(picker, animated: true)
+        present(picture, animated: true)
     }
 }
 

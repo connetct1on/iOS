@@ -10,8 +10,8 @@ import Then
 import SnapKit
 import MessageKit
 
-class MessageStackViewVC: UIViewController {
-    lazy var StackView: UITableView = {
+class JunctionVC: UIViewController {
+    lazy var JunctionView: UITableView = {
         let view = UITableView()
         view.register(MessageTableViewCell.self, forCellReuseIdentifier: MessageTableViewCell.className)
         view.delegate = self
@@ -29,15 +29,15 @@ class MessageStackViewVC: UIViewController {
     }
     
     private func setup() {
-        view.addSubview(StackView)
-        StackView.snp.makeConstraints { make in
+        view.addSubview(JunctionView)
+        JunctionView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
         Messages = getStackMocks()
     }
 }
 
-extension MessageStackViewVC: UITableViewDataSource, UITableViewDelegate {
+extension JunctionVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Messages.count
     }

@@ -18,9 +18,7 @@ class HomeVC: UIViewController {
         $0.contentHorizontalAlignment = .fill
         $0.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         $0.addTarget(self, action: #selector(didTabLogoBt), for: .touchUpInside)
-        
     }
-    
     let schoolFacilitiesBt = UIButton().then {
         $0.setImage(UIImage(named: "playground"), for: .normal)
         $0.backgroundColor = UIColor(red: 10.0/255, green:0.0/255, blue:114.0/255, alpha: 1)
@@ -29,9 +27,7 @@ class HomeVC: UIViewController {
         $0.contentHorizontalAlignment = .fill
         $0.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         $0.addTarget(self, action: #selector(didTabFacilitiesBt), for: .touchUpInside)
-        
     }
-    
     let schoolEventBt = UIButton().then {
         $0.setImage(UIImage(named: "playground"), for: .normal)
         $0.backgroundColor = UIColor(red: 10.0/255, green:0.0/255, blue:114.0/255, alpha: 1)
@@ -40,9 +36,7 @@ class HomeVC: UIViewController {
         $0.contentHorizontalAlignment = .fill
         $0.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         $0.addTarget(self, action: #selector(didTabEventBt), for: .touchUpInside)
-        
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -58,31 +52,28 @@ extension HomeVC{
         let url = URL(string: "https://www.dgsw.hs.kr")
         UIApplication.shared.open(url!, options: [:] )
     }
-    
     @objc func didTabFacilitiesBt() {
         print("didTabFacilitiesBt")
         let VC = FacilitiesVC()
         self.present(VC, animated: true, completion: nil)
     }
-    
     @objc func didTabEventBt() {
         print("didTabEventBt")
         let VC = EventVC()
         self.present(VC, animated: true, completion: nil)
     }
     @objc private func didTabMessageButton() {
-        let VC = MessageStackViewVC()
+        let VC = JunctionVC()
         VC.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(VC, animated: true)
     }
-    
-    private func setupNavigationBar() {
+    func setupNavigationBar() {
         let navigationBar = UINavigationBarAppearance()
         navigationBar.backgroundColor = UIColor(red: 10.0/255, green:0.0/255, blue:114.0/255, alpha: 1)
         navigationController?.navigationBar.standardAppearance = navigationBar
         navigationController?.navigationBar.scrollEdgeAppearance = navigationBar
-        
     }
+    
     
     private func setupNavigationBarItem() {
         

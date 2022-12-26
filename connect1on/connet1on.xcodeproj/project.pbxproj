@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8505CDCB2953F9DF008E4932 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8505CDCA2953F9DF008E4932 /* MessageKit */; };
 		8505CDD129540046008E4932 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDD029540046008E4932 /* TableViewCell.swift */; };
-		8505CDDC29547362008E4932 /* MassageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDDB29547362008E4932 /* MassageAPI.swift */; };
+		8505CDDC29547362008E4932 /* Junction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDDB29547362008E4932 /* Junction.swift */; };
 		8505CDDE295486A7008E4932 /* NSObjc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDDD295486A7008E4932 /* NSObjc.swift */; };
 		8505CDE12954A038008E4932 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDE02954A038008E4932 /* Color.swift */; };
 		8505CDE32954A153008E4932 /* Message .swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDE22954A153008E4932 /* Message .swift */; };
@@ -23,7 +23,7 @@
 		858024B62937806C003BBF05 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858024B52937806C003BBF05 /* API.swift */; };
 		858024B829378E4E003BBF05 /* Signin API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858024B729378E4E003BBF05 /* Signin API.swift */; };
 		858024F02938D483003BBF05 /* SetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858024EF2938D483003BBF05 /* SetVC.swift */; };
-		859D133A294634590003634D /* StackViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859D1339294634590003634D /* StackViewVC.swift */; };
+		859D133A294634590003634D /*  JunctionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859D1339294634590003634D /*  JunctionVC.swift */; };
 		859E1F6C292129CA00571D79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859E1F6B292129CA00571D79 /* AppDelegate.swift */; };
 		859E1F6E292129CA00571D79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859E1F6D292129CA00571D79 /* SceneDelegate.swift */; };
 		859E1F75292129CB00571D79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 859E1F74292129CB00571D79 /* Assets.xcassets */; };
@@ -58,7 +58,7 @@
 		09DC7C6A8130F470F97542FB /* Pods-connect1on.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-connect1on.debug.xcconfig"; path = "Target Support Files/Pods-connect1on/Pods-connect1on.debug.xcconfig"; sourceTree = "<group>"; };
 		2C7DF6081963084958DA47CB /* Pods-connect1on.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-connect1on.release.xcconfig"; path = "Target Support Files/Pods-connect1on/Pods-connect1on.release.xcconfig"; sourceTree = "<group>"; };
 		8505CDD029540046008E4932 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		8505CDDB29547362008E4932 /* MassageAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MassageAPI.swift; path = connect1on/TabBar/message/MassageAPI.swift; sourceTree = SOURCE_ROOT; };
+		8505CDDB29547362008E4932 /* Junction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Junction.swift; path = connect1on/TabBar/message/Junction.swift; sourceTree = SOURCE_ROOT; };
 		8505CDDD295486A7008E4932 /* NSObjc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjc.swift; sourceTree = "<group>"; };
 		8505CDE02954A038008E4932 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		8505CDE22954A153008E4932 /* Message .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message .swift"; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 		858024B52937806C003BBF05 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		858024B729378E4E003BBF05 /* Signin API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Signin API.swift"; sourceTree = "<group>"; };
 		858024EF2938D483003BBF05 /* SetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetVC.swift; sourceTree = "<group>"; };
-		859D1339294634590003634D /* StackViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StackViewVC.swift; path = /Users/choesihun/Documents/GitHub/iOS/connect1on/connect1on/TabBar/message/StackViewVC.swift; sourceTree = "<absolute>"; };
+		859D1339294634590003634D /*  JunctionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = " JunctionVC.swift"; path = "/Users/choesihun/Documents/GitHub/iOS/connect1on/connect1on/TabBar/message/ JunctionVC.swift"; sourceTree = "<absolute>"; };
 		859E1F68292129CA00571D79 /* connect1on.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = connect1on.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		859E1F6B292129CA00571D79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		859E1F6D292129CA00571D79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				858024B729378E4E003BBF05 /* Signin API.swift */,
-				8505CDDB29547362008E4932 /* MassageAPI.swift */,
+				8505CDDB29547362008E4932 /* Junction.swift */,
 				8505CDE22954A153008E4932 /* Message .swift */,
 				8505CDE42954A19D008E4932 /* ImageItem.swift */,
 				8505CDE92954A355008E4932 /* Mocks.swift */,
@@ -174,7 +174,7 @@
 		859AF2AB293F98AE001155E6 /* message */ = {
 			isa = PBXGroup;
 			children = (
-				859D1339294634590003634D /* StackViewVC.swift */,
+				859D1339294634590003634D /*  JunctionVC.swift */,
 				8510C2FF292F81950093BD1A /* MessageVC.swift */,
 				8505CDD72954569C008E4932 /* View */,
 			);
@@ -436,12 +436,12 @@
 				8505CDD129540046008E4932 /* TableViewCell.swift in Sources */,
 				85E2EEA829266121000636BC /* profile.swift in Sources */,
 				859E1FA12921314400571D79 /* QuestionVC.swift in Sources */,
-				859D133A294634590003634D /* StackViewVC.swift in Sources */,
+				859D133A294634590003634D /*  JunctionVC.swift in Sources */,
 				858024F02938D483003BBF05 /* SetVC.swift in Sources */,
 				858024B829378E4E003BBF05 /* Signin API.swift in Sources */,
 				858024B62937806C003BBF05 /* API.swift in Sources */,
 				8505CDEC295528B1008E4932 /* ViewController.swift in Sources */,
-				8505CDDC29547362008E4932 /* MassageAPI.swift in Sources */,
+				8505CDDC29547362008E4932 /* Junction.swift in Sources */,
 				85E2EEAB29266232000636BC /* Signin.swift in Sources */,
 				859E1F6C292129CA00571D79 /* AppDelegate.swift in Sources */,
 				8505CDE12954A038008E4932 /* Color.swift in Sources */,
