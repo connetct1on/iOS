@@ -10,7 +10,7 @@ import UIKit
 
 struct Message: MessageType {
     
-    let name: String = "뫄 자신있나"
+    let userName: String = "뫄 자신있나"
     let senderName: String = "뫄.. 자신없다"
     let id: String?
     var messageId: String {
@@ -32,14 +32,14 @@ struct Message: MessageType {
     var downloadURL: URL?
     
     init(content: String) {
-        sender = Sender(senderId: senderName, displayName: name)
+        sender = Sender(senderId: senderName, displayName: userName)
         self.content = content
         sentDate = Date()
         id = nil
     }
     
     init(image: UIImage) {
-        sender = Sender(senderId: senderName, displayName:name)
+        sender = Sender(senderId: senderName, displayName:userName)
         self.image = image
         sentDate = Date()
         content = ""

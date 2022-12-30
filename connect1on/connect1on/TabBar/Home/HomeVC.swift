@@ -52,20 +52,18 @@ extension HomeVC{
         let url = URL(string: "https://www.dgsw.hs.kr")
         UIApplication.shared.open(url!, options: [:] )
     }
+    @objc func didTabMessageButton() {
+        let VC = JunctionVC()
+        VC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(VC, animated: true)
+    }
     @objc func didTabFacilitiesBt() {
-        print("didTabFacilitiesBt")
         let VC = FacilitiesVC()
         self.present(VC, animated: true, completion: nil)
     }
     @objc func didTabEventBt() {
-        print("didTabEventBt")
         let VC = EventVC()
         self.present(VC, animated: true, completion: nil)
-    }
-    @objc private func didTabMessageButton() {
-        let VC = JunctionVC()
-        VC.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(VC, animated: true)
     }
     func setupNavigationBar() {
         let navigationBar = UINavigationBarAppearance()

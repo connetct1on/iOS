@@ -25,7 +25,9 @@
                                 <rect key="frame" x="0.0" y="47" width="390" height="763"/>
                                 <gestureRecognizers/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="763" id="2NY-ra-yO5"/>
                                     <constraint firstAttribute="width" id="AIn-Qs-Kud"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="390" id="R12-bf-avF"/>
                                     <constraint firstAttribute="height" id="u1e-bK-vH9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GangwonEduAll-OTFBold" family="GangwonEduAll OTF" pointSize="17"/>

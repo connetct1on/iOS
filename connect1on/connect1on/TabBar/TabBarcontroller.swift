@@ -28,7 +28,7 @@ class TabBarcontroller: UITabBarController {
         profileTabBar.tabBarItem.title = ""
         profileTabBar.tabBarItem.image = UIImage(systemName: "person")
         
-        viewControllers = [questionTabBar, homeTabBar, profileTabBar]
+        viewControllers = [homeTabBar, questionTabBar, profileTabBar]
     }
     
 }
