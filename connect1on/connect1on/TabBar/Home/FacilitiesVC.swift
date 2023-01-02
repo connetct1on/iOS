@@ -56,6 +56,12 @@ extension FacilitiesVC {
             
         }
     }
+    private func setupNavigationBar() {
+        let navigationBar = UINavigationBarAppearance()
+        navigationBar.backgroundColor = .mainColor;
+        navigationController?.navigationBar.standardAppearance = navigationBar
+        navigationController?.navigationBar.scrollEdgeAppearance = navigationBar
+    }
     func setupNavigationBarItem() {
         let backButton = UIBarButtonItem(image: UIImage(systemName: "chevron.left"),
                                          style: .plain,
@@ -70,12 +76,6 @@ extension FacilitiesVC {
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         pageControl.currentPage = Int(floor(scrollView.contentOffset.x / UIScreen.main.bounds.width))
-    }
-    func setupNavigationBar() {
-        let navigationBar = UINavigationBarAppearance()
-        navigationBar.backgroundColor = .mainColor;
-        navigationController?.navigationBar.standardAppearance = navigationBar
-        navigationController?.navigationBar.scrollEdgeAppearance = navigationBar
     }
     func setup() {
         [
