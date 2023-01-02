@@ -64,7 +64,8 @@ extension HomeVC{
     }
     @objc func didTabEventBt() {
         let VC = EventVC()
-        self.present(VC, animated: true, completion: nil)
+        let navigationController = UINavigationController(rootViewController: VC)
+        present(navigationController, animated: true, completion: nil)
     }
     func setupNavigationBar() {
         let navigationBar = UINavigationBarAppearance()
