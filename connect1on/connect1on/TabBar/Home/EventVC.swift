@@ -10,13 +10,6 @@ import Then
 import SnapKit
 
 class EventVC: UIViewController, UIScrollViewDelegate {
-    let navigationBar = UINavigationBar().then {
-        $0.backgroundColor = UIColor(red: 230.0/255, green: 230.0/255, blue: 230.0/255, alpha: 1)
-    }
-    let line = UIView().then {
-        $0.layer.borderWidth = 1
-        $0.layer.borderColor = UIColor(red: 200.0/255, green: 200.0/255, blue: 200.0/255, alpha: 1).cgColor
-    }
     let explanation = UILabel().then {
         $0.text = "해커톤"
         $0.font = UIFont(name: "GangwonEduAll-OTFBold", size:60)
@@ -44,11 +37,11 @@ class EventVC: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         setup()
-        setupNavigationBarItem()
         scrollView.delegate = self
         scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width * CGFloat(imageNames.count), height: UIScreen.main.bounds.height)
         insertImageIntoScrollView()
         setupNavigationBar()
+        setupNavigationBarItem()
     }
 }
 
@@ -61,10 +54,9 @@ extension EventVC {
             imageView.frame = UIScreen.main.bounds
             imageView.frame.origin.x = UIScreen.main.bounds.width * CGFloat(index)
             scrollView.addSubview(imageView)
-            
         }
     }
-    func setupNavigationBar() {
+    private func setupNavigationBar() {
         let navigationBar = UINavigationBarAppearance()
         navigationBar.backgroundColor = .mainColor; navigationController?.navigationBar.standardAppearance = navigationBar
         navigationController?.navigationBar.scrollEdgeAppearance = navigationBar
@@ -84,25 +76,10 @@ extension EventVC {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         pageControl.currentPage = Int(floor(scrollView.contentOffset.x / UIScreen.main.bounds.width))
     }
-    
-    
-    
     func setup() {
         [
-            navigationBar, line, explanation, scrollView, pageControl
+            explanation, scrollView, pageControl
         ].forEach{ self.view.addSubview($0) }
-        navigationBar.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(0)
-            $0.bottom.equalTo(explanation).offset(-110)
-            $0.left.equalToSuperview().offset(0)
-            $0.right.equalToSuperview().offset(0)
-        }
-        line.snp.makeConstraints {
-            $0.top.equalTo(navigationBar.snp.bottom).offset(0)
-            $0.bottom.equalTo(navigationBar.snp.bottom).offset(1)
-            $0.left.equalToSuperview().offset(0)
-            $0.right.equalToSuperview().offset(0)
-        }
         explanation.snp.makeConstraints {
             $0.top.equalToSuperview().offset(100)
             $0.bottom.equalTo(scrollView.snp.top).offset(-5)
