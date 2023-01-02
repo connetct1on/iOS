@@ -13,7 +13,7 @@ class HomeVC: UIViewController {
     
     let homePageBt = UIButton().then {
         $0.setImage(UIImage(named: "dgsw_logo"), for: .normal)
-        $0.backgroundColor = UIColor(red: 10.0/255, green:0.0/255, blue:114.0/255, alpha: 1)
+        $0.backgroundColor = .mainColor
         $0.contentVerticalAlignment = .fill
         $0.contentHorizontalAlignment = .fill
         $0.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
@@ -21,7 +21,7 @@ class HomeVC: UIViewController {
     }
     let schoolFacilitiesBt = UIButton().then {
         $0.setImage(UIImage(named: "playground"), for: .normal)
-        $0.backgroundColor = UIColor(red: 10.0/255, green:0.0/255, blue:114.0/255, alpha: 1)
+        $0.backgroundColor = .mainColor
         $0.layer.cornerRadius = 25
         $0.contentVerticalAlignment = .fill
         $0.contentHorizontalAlignment = .fill
@@ -30,7 +30,7 @@ class HomeVC: UIViewController {
     }
     let schoolEventBt = UIButton().then {
         $0.setImage(UIImage(named: "playground"), for: .normal)
-        $0.backgroundColor = UIColor(red: 10.0/255, green:0.0/255, blue:114.0/255, alpha: 1)
+        $0.backgroundColor = .mainColor
         $0.layer.cornerRadius = 25
         $0.contentVerticalAlignment = .fill
         $0.contentHorizontalAlignment = .fill
@@ -59,7 +59,8 @@ extension HomeVC{
     }
     @objc func didTabFacilitiesBt() {
         let VC = FacilitiesVC()
-        self.present(VC, animated: true, completion: nil)
+        let navigationController = UINavigationController(rootViewController: VC)
+        present(navigationController, animated: true, completion: nil)
     }
     @objc func didTabEventBt() {
         let VC = EventVC()
@@ -67,8 +68,7 @@ extension HomeVC{
     }
     func setupNavigationBar() {
         let navigationBar = UINavigationBarAppearance()
-        navigationBar.backgroundColor = UIColor(red: 10.0/255, green:0.0/255, blue:114.0/255, alpha: 1)
-        navigationController?.navigationBar.standardAppearance = navigationBar
+        navigationBar.backgroundColor = .mainColor; navigationController?.navigationBar.standardAppearance = navigationBar
         navigationController?.navigationBar.scrollEdgeAppearance = navigationBar
     }
     

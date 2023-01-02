@@ -44,10 +44,11 @@ class EventVC: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         setup()
-        //        setupNavigationBarItem()
+        setupNavigationBarItem()
         scrollView.delegate = self
         scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width * CGFloat(imageNames.count), height: UIScreen.main.bounds.height)
         insertImageIntoScrollView()
+        setupNavigationBar()
     }
 }
 
@@ -63,14 +64,20 @@ extension EventVC {
             
         }
     }
-    //    func setupNavigationBarItem() {
-    //            image: UIImage(systemName: "paperplane"),
-    //            style: .plain,
-    //            target: self,
-    //            action: #selector(didTapBackButton)
-    //        )
-    //        navigationItem.leftBarButtonItem = backButton
-    //    }
+    func setupNavigationBar() {
+        let navigationBar = UINavigationBarAppearance()
+        navigationBar.backgroundColor = .mainColor; navigationController?.navigationBar.standardAppearance = navigationBar
+        navigationController?.navigationBar.scrollEdgeAppearance = navigationBar
+    }
+    func setupNavigationBarItem() {
+        let backButton = UIBarButtonItem(image: UIImage(systemName: "chevron.left"),
+                                         style: .plain,
+                                         target: self,
+                                         action: #selector(didTapBackButton)
+        )
+        backButton.tintColor = UIColor .white
+        navigationItem.leftBarButtonItem = backButton
+    }
     @objc func didTapBackButton() {
         self.dismiss(animated: true)
     }
