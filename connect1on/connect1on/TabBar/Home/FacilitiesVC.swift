@@ -82,18 +82,6 @@ extension FacilitiesVC {
             //        navigationBar, line,
             explanation, scrollView, pageControl
         ].forEach{ self.view.addSubview($0) }
-        //    navigationBar.snp.makeConstraints {
-        //        $0.top.equalToSuperview().offset(0)
-        //        $0.bottom.equalTo(explanation).offset(-110)
-        //        $0.left.equalToSuperview().offset(0)
-        //        $0.right.equalToSuperview().offset(0)
-        //    }
-        //    line.snp.makeConstraints {
-        //        $0.top.equalTo(navigationBar.snp.bottom).offset(0)
-        //        $0.bottom.equalTo(navigationBar.snp.bottom).offset(1)
-        //        $0.left.equalToSuperview().offset(0)
-        //        $0.right.equalToSuperview().offset(0)
-        //    }
         explanation.snp.makeConstraints {
             $0.top.equalToSuperview().offset(100)
             $0.bottom.equalTo(scrollView.snp.top).offset(-5)
