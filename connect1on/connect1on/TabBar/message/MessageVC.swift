@@ -148,16 +148,14 @@ extension MessageVC: MessagesLayoutDelegate {
 
 // 상대방이 보낸 메시지, 내가 보낸 메시지를 구분하여 색상과 모양 지정
 extension MessageVC: MessagesDisplayDelegate {
-    
     // 말풍선의 배경 색상
     func backgroundColor(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
         return isFromCurrentSender(message: message) ? .systemYellow : .systemGray5
     }
-    
-    
     func textColor(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
         return isFromCurrentSender(message: message) ? .black : .black
     }
+    
     
     // 말풍선의 꼬리 모양 방향
     func messageStyle(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageStyle {
