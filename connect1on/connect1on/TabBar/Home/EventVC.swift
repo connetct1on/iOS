@@ -11,16 +11,14 @@ import SnapKit
 
 class EventVC: UIViewController, UIScrollViewDelegate {
     let explanation = UILabel().then {
-        $0.text = "해커톤"
         $0.font = UIFont(name: "GangwonEduAll-OTFBold", size:60)
         $0.font.withSize(60)
         $0.textAlignment = .center //가운데 정렬
-        
     }
     var imageNames = ["ground", "love", "dgsw_logo"]
     let pageControl = UIPageControl().then {
-        $0.currentPage = 3
-        $0.numberOfPages = 3
+        $0.currentPage = 2
+        $0.numberOfPages = 2
         $0.pageIndicatorTintColor = .lightGray
         $0.currentPageIndicatorTintColor = .black
     }
@@ -37,16 +35,28 @@ class EventVC: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         setup()
-        scrollView.delegate = self
-        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width * CGFloat(imageNames.count), height: UIScreen.main.bounds.height)
         insertImageIntoScrollView()
         setupNavigationBar()
         setupNavigationBarItem()
+        scrollViewSet()
+        
     }
 }
-
-
 extension EventVC {
+    func updateLabelForPageControl() {
+        switch pageControl.currentPage {
+        case 0:
+            explanation.text = "Page 1"
+        case 1:
+            explanation.text = "Page 2"
+        default:
+            explanation.text = "Page 3"
+        }
+    }
+    func scrollViewSet() {
+        scrollView.delegate = self
+        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width * CGFloat(imageNames.count), height: UIScreen.main.bounds.height)
+    }
     func insertImageIntoScrollView() {
         for (index, imageName) in imageNames.enumerated() {
             let image = UIImage(named: imageName)
@@ -58,7 +68,7 @@ extension EventVC {
     }
     private func setupNavigationBar() {
         let navigationBar = UINavigationBarAppearance()
-        navigationBar.backgroundColor = .mainColor; navigationController?.navigationBar.standardAppearance = navigationBar
+        navigationBar.backgroundColor = .secondColor; navigationController?.navigationBar.standardAppearance = navigationBar
         navigationController?.navigationBar.scrollEdgeAppearance = navigationBar
     }
     func setupNavigationBarItem() {
@@ -67,7 +77,7 @@ extension EventVC {
                                          target: self,
                                          action: #selector(didTapBackButton)
         )
-        backButton.tintColor = UIColor .white
+        backButton.tintColor = UIColor .black
         navigationItem.leftBarButtonItem = backButton
     }
     @objc func didTapBackButton() {

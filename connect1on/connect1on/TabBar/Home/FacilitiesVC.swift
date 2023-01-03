@@ -58,7 +58,7 @@ extension FacilitiesVC {
     }
     private func setupNavigationBar() {
         let navigationBar = UINavigationBarAppearance()
-        navigationBar.backgroundColor = .mainColor;
+        navigationBar.backgroundColor = .secondColor;
         navigationController?.navigationBar.standardAppearance = navigationBar
         navigationController?.navigationBar.scrollEdgeAppearance = navigationBar
     }
@@ -68,7 +68,7 @@ extension FacilitiesVC {
                                          target: self,
                                          action: #selector(didTapBackButton)
         )
-        backButton.tintColor = UIColor .white
+        backButton.tintColor = UIColor .black
         navigationItem.leftBarButtonItem = backButton
     }
     @objc func didTapBackButton() {
