@@ -11,14 +11,15 @@ import SnapKit
 
 class EventVC: UIViewController, UIScrollViewDelegate {
     let explanation = UILabel().then {
+        $0.text = "graund"
         $0.font = UIFont(name: "GangwonEduAll-OTFBold", size:60)
         $0.font.withSize(60)
         $0.textAlignment = .center //가운데 정렬
     }
     var imageNames = ["ground", "love", "dgsw_logo"]
     let pageControl = UIPageControl().then {
-        $0.currentPage = 2
-        $0.numberOfPages = 2
+        $0.currentPage = 3
+        $0.numberOfPages = 3
         $0.pageIndicatorTintColor = .lightGray
         $0.currentPageIndicatorTintColor = .black
     }
@@ -31,6 +32,11 @@ class EventVC: UIViewController, UIScrollViewDelegate {
         $0.isPagingEnabled = true
         $0.bounces = false
     }
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "currentPage" {
+            pageControlCondition()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -39,25 +45,25 @@ class EventVC: UIViewController, UIScrollViewDelegate {
         setupNavigationBar()
         setupNavigationBarItem()
         scrollViewSet()
-        
+        pageControl.addObserver(self, forKeyPath: "currentPage", options: [.new], context: nil)
     }
 }
 extension EventVC {
-    func updateLabelForPageControl() {
+    func pageControlCondition() {
         switch pageControl.currentPage {
         case 0:
-            explanation.text = "Page 1"
+            explanation.text = "graund"
         case 1:
-            explanation.text = "Page 2"
+            explanation.text = "love"
         default:
-            explanation.text = "Page 3"
+            explanation.text = "dgsw_logo"
         }
     }
     func scrollViewSet() {
         scrollView.delegate = self
         scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width * CGFloat(imageNames.count), height: UIScreen.main.bounds.height)
     }
-    func insertImageIntoScrollView() {
+    @objc func insertImageIntoScrollView() {
         for (index, imageName) in imageNames.enumerated() {
             let image = UIImage(named: imageName)
             let imageView = UIImageView(image: image)
