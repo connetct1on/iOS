@@ -12,11 +12,10 @@ import SnapKit
 
 class FacilitiesVC: UIViewController, UIScrollViewDelegate {
     let explanation = UILabel().then {
-        $0.text = "운동장"
+        $0.text = "graund"
         $0.font = UIFont(name: "GangwonEduAll-OTFBold", size:60)
         $0.font.withSize(60)
         $0.textAlignment = .center //가운데 정렬
-        
     }
     var imageNames = ["ground", "love", "dgsw_logo"]
     let pageControl = UIPageControl().then {
@@ -34,32 +33,49 @@ class FacilitiesVC: UIViewController, UIScrollViewDelegate {
         $0.isPagingEnabled = true
         $0.bounces = false
     }
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "currentPage" {
+            pageControlCondition()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         setup()
-        setupNavigationBarItem()
-        scrollView.delegate = self
-        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width * CGFloat(imageNames.count), height: UIScreen.main.bounds.height)
         insertImageIntoScrollView()
         setupNavigationBar()
+        setupNavigationBarItem()
+        scrollViewSet()
+        pageControl.addObserver(self, forKeyPath: "currentPage", options: [.new], context: nil)
     }
 }
 extension FacilitiesVC {
-    func insertImageIntoScrollView() {
+    func pageControlCondition() {
+        switch pageControl.currentPage {
+        case 0:
+            explanation.text = "graund"
+        case 1:
+            explanation.text = "love"
+        default:
+            explanation.text = "dgsw_logo"
+        }
+    }
+    func scrollViewSet() {
+        scrollView.delegate = self
+        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width * CGFloat(imageNames.count), height: UIScreen.main.bounds.height)
+    }
+    @objc func insertImageIntoScrollView() {
         for (index, imageName) in imageNames.enumerated() {
             let image = UIImage(named: imageName)
             let imageView = UIImageView(image: image)
             imageView.frame = UIScreen.main.bounds
             imageView.frame.origin.x = UIScreen.main.bounds.width * CGFloat(index)
             scrollView.addSubview(imageView)
-            
         }
     }
     private func setupNavigationBar() {
         let navigationBar = UINavigationBarAppearance()
-        navigationBar.backgroundColor = .secondColor;
-        navigationController?.navigationBar.standardAppearance = navigationBar
+        navigationBar.backgroundColor = .secondColor; navigationController?.navigationBar.standardAppearance = navigationBar
         navigationController?.navigationBar.scrollEdgeAppearance = navigationBar
     }
     func setupNavigationBarItem() {
@@ -79,7 +95,6 @@ extension FacilitiesVC {
     }
     func setup() {
         [
-            //        navigationBar, line,
             explanation, scrollView, pageControl
         ].forEach{ self.view.addSubview($0) }
         explanation.snp.makeConstraints {
@@ -99,7 +114,6 @@ extension FacilitiesVC {
             $0.left.equalTo(scrollView.snp.left).offset(0)
             $0.right.equalTo(scrollView.snp.right).offset(0)
         }
-        
     }
 }
 
