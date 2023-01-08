@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8505CDCB2953F9DF008E4932 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8505CDCA2953F9DF008E4932 /* MessageKit */; };
-		8505CDD129540046008E4932 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDD029540046008E4932 /* TableViewCell.swift */; };
+		8505CDD129540046008E4932 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDD029540046008E4932 /* MessageTableViewCell.swift */; };
 		8505CDDC29547362008E4932 /* Junction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDDB29547362008E4932 /* Junction.swift */; };
 		8505CDDE295486A7008E4932 /* NSObjc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDDD295486A7008E4932 /* NSObjc.swift */; };
 		8505CDE12954A038008E4932 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDE02954A038008E4932 /* Color.swift */; };
@@ -26,7 +26,6 @@
 		8556F45C2962E6DA0000B03E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8556F45B2962E6DA0000B03E /* FirebaseFirestore */; };
 		8556F45E2962E6DA0000B03E /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8556F45D2962E6DA0000B03E /* FirebaseFirestoreSwift */; };
 		8556F4602962E6DA0000B03E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8556F45F2962E6DA0000B03E /* FirebaseStorage */; };
-		8556F462296322910000B03E /* Firestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8556F461296322910000B03E /* Firestore.swift */; };
 		858024B62937806C003BBF05 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858024B52937806C003BBF05 /* API.swift */; };
 		858024B829378E4E003BBF05 /* Signin API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858024B729378E4E003BBF05 /* Signin API.swift */; };
 		858024F02938D483003BBF05 /* SetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858024EF2938D483003BBF05 /* SetVC.swift */; };
@@ -41,6 +40,8 @@
 		85E2EEA829266121000636BC /* profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E2EEA729266121000636BC /* profile.swift */; };
 		85E2EEAB29266232000636BC /* Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E2EEAA29266232000636BC /* Signin.swift */; };
 		85E2EED5292946A5000636BC /* Font.otf in Resources */ = {isa = PBXBuildFile; fileRef = 85E2EED32929439C000636BC /* Font.otf */; };
+		85F6AF7A2968949100FCFB4C /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F6AF792968949100FCFB4C /* QuestionTableViewCell.swift */; };
+		85F6AF7C296AEB9400FCFB4C /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F6AF7B296AEB9400FCFB4C /* Question.swift */; };
 		D2470652B00C1983FB5BEC8A /* Pods_connect1on.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF8B1E9057DE01A816AD5A8 /* Pods_connect1on.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +65,7 @@
 /* Begin PBXFileReference section */
 		09DC7C6A8130F470F97542FB /* Pods-connect1on.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-connect1on.debug.xcconfig"; path = "Target Support Files/Pods-connect1on/Pods-connect1on.debug.xcconfig"; sourceTree = "<group>"; };
 		2C7DF6081963084958DA47CB /* Pods-connect1on.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-connect1on.release.xcconfig"; path = "Target Support Files/Pods-connect1on/Pods-connect1on.release.xcconfig"; sourceTree = "<group>"; };
-		8505CDD029540046008E4932 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		8505CDD029540046008E4932 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		8505CDDB29547362008E4932 /* Junction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Junction.swift; path = connect1on/TabBar/message/Junction.swift; sourceTree = SOURCE_ROOT; };
 		8505CDDD295486A7008E4932 /* NSObjc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjc.swift; sourceTree = "<group>"; };
 		8505CDE02954A038008E4932 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -79,7 +80,6 @@
 		8531E1A2294D049C00C78AAF /* EventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventVC.swift; sourceTree = "<group>"; };
 		8542293829677DF3009FDE3F /* AddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVC.swift; sourceTree = "<group>"; };
 		8556F4562962DDF70000B03E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		8556F461296322910000B03E /* Firestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firestore.swift; sourceTree = "<group>"; };
 		858024B52937806C003BBF05 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		858024B729378E4E003BBF05 /* Signin API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Signin API.swift"; sourceTree = "<group>"; };
 		858024EF2938D483003BBF05 /* SetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetVC.swift; sourceTree = "<group>"; };
@@ -97,6 +97,8 @@
 		85E2EEA729266121000636BC /* profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profile.swift; sourceTree = "<group>"; };
 		85E2EEAA29266232000636BC /* Signin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signin.swift; sourceTree = "<group>"; };
 		85E2EED32929439C000636BC /* Font.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Font.otf; sourceTree = "<group>"; };
+		85F6AF792968949100FCFB4C /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		85F6AF7B296AEB9400FCFB4C /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		9BF8B1E9057DE01A816AD5A8 /* Pods_connect1on.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_connect1on.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -134,7 +136,7 @@
 		8505CDD72954569C008E4932 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8505CDD029540046008E4932 /* TableViewCell.swift */,
+				8505CDD029540046008E4932 /* MessageTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -147,7 +149,7 @@
 				8505CDE22954A153008E4932 /* Message .swift */,
 				8505CDE42954A19D008E4932 /* ImageItem.swift */,
 				8505CDE92954A355008E4932 /* Mocks.swift */,
-				8556F461296322910000B03E /* Firestore.swift */,
+				85F6AF7B296AEB9400FCFB4C /* Question.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,6 +244,7 @@
 			children = (
 				859E1F9C2921306000571D79 /* TabBarcontroller.swift */,
 				859E1FA02921314400571D79 /* QuestionVC.swift */,
+				85F6AF792968949100FCFB4C /* QuestionTableViewCell.swift */,
 				8542293829677DF3009FDE3F /* AddVC.swift */,
 				854229372966EFF7009FDE3F /* New Group */,
 				85E2EEA729266121000636BC /* profile.swift */,
@@ -464,12 +467,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8505CDD129540046008E4932 /* TableViewCell.swift in Sources */,
+				8505CDD129540046008E4932 /* MessageTableViewCell.swift in Sources */,
+				85F6AF7A2968949100FCFB4C /* QuestionTableViewCell.swift in Sources */,
 				85E2EEA829266121000636BC /* profile.swift in Sources */,
 				859E1FA12921314400571D79 /* QuestionVC.swift in Sources */,
 				859D133A294634590003634D /*  JunctionVC.swift in Sources */,
 				858024F02938D483003BBF05 /* SetVC.swift in Sources */,
-				8556F462296322910000B03E /* Firestore.swift in Sources */,
 				858024B829378E4E003BBF05 /* Signin API.swift in Sources */,
 				858024B62937806C003BBF05 /* API.swift in Sources */,
 				8505CDEC295528B1008E4932 /* ViewController.swift in Sources */,
@@ -485,6 +488,7 @@
 				8505CDE72954A1E0008E4932 /* Sender.swift in Sources */,
 				8531E1A3294D049C00C78AAF /* EventVC.swift in Sources */,
 				8510C300292F81950093BD1A /* MessageVC.swift in Sources */,
+				85F6AF7C296AEB9400FCFB4C /* Question.swift in Sources */,
 				8505CDDE295486A7008E4932 /* NSObjc.swift in Sources */,
 				8505CDE32954A153008E4932 /* Message .swift in Sources */,
 				859E1F9D2921306000571D79 /* TabBarcontroller.swift in Sources */,
