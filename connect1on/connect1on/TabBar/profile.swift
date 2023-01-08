@@ -21,16 +21,12 @@ class ProfileVC: UIViewController {
     }
 }
 extension ProfileVC {
-    
     private func setupNavigationBar() {
         let navigationBarAppearance = UINavigationBarAppearance()
         navigationBarAppearance.backgroundColor = UIColor(red: 10.0/255, green:0.0/255, blue:114.0/255, alpha: 1)
         navigationController?.navigationBar.standardAppearance = navigationBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance
-        
     }
-    
-
 private func setupNavigationBarItem() {
     let setButton = UIBarButtonItem(
         image: UIImage(systemName: "gearshape.fill"),
@@ -38,13 +34,10 @@ private func setupNavigationBarItem() {
         target: self,
         action: #selector(didTabSetButton))
     navigationItem.rightBarButtonItem = setButton
-    
 }
     @objc func didTabSetButton() {
-        print("didTabSetButton")
         let VC = SetVC()
         VC.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(VC, animated: true)
-        
+        navigationController?.pushViewController(VC, animated: true)
     }
 }
