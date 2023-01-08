@@ -28,7 +28,9 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="763" id="2NY-ra-yO5"/>
                                     <constraint firstAttribute="width" id="AIn-Qs-Kud"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="390" id="R12-bf-avF"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="763" id="jpm-hX-lzR"/>
                                     <constraint firstAttribute="height" id="u1e-bK-vH9"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="390" id="zg8-fB-xnw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GangwonEduAll-OTFBold" family="GangwonEduAll OTF" pointSize="17"/>
                                 <color key="textColor" red="0.7019608021" green="0.69411766529999996" blue="0.69803923369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -49,7 +51,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="IHQ-Ec-SuD" secondAttribute="trailing" id="Vu4-wz-8C6"/>
                             <constraint firstItem="IHQ-Ec-SuD" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="XSx-7O-YZz"/>
                             <constraint firstItem="IHQ-Ec-SuD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XYD-FY-I3U"/>
-                            <constraint firstItem="IHQ-Ec-SuD" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Y6f-Oj-RSr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IHQ-Ec-SuD" secondAttribute="bottom" id="tUM-Ke-8mS"/>
                         </constraints>
                     </view>
