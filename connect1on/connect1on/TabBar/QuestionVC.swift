@@ -21,11 +21,12 @@ class QuestionVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        setupNavigationBarItem()
         view.backgroundColor = .white
     }
 }
 extension QuestionVC {
-    func setup() {
+    private func setup() {
         view.addSubview(tableView)
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
@@ -44,6 +45,7 @@ extension QuestionVC {
             target: self,
             action: #selector(didTabAddBt)
         )
+        navigationItem.rightBarButtonItem = AddBt
     }
     @objc func didTabAddBt() {
         let VC = AddVC()
@@ -52,13 +54,13 @@ extension QuestionVC {
     }
     
 }
-extension QuestionVC: UITableViewDataSource, UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.post.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-    }
-}
+//extension QuestionVC: UITableViewDataSource, UITableViewDelegate {
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return self.post.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: QuestionTableViewCell.className, for: indexPath) as! QuestionTableViewCell.
+//    }
+//}
