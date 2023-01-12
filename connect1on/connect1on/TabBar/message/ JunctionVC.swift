@@ -53,8 +53,8 @@ extension JunctionVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let stack = Messages[indexPath.row]
-        let viewController = MessageVC(Stack: stack)
+        let cell = Messages[indexPath.row]
+        let viewController = MessageVC(Stack: cell)
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
