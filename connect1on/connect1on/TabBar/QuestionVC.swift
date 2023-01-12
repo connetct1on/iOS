@@ -10,19 +10,18 @@ import UIKit
 import Then
 import SnapKit
 
-class QuestionVC: UIViewController {
+class QuestionVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    var postDatas = [PostDatas]()
     let tableView = UITableView().then {
         $0.register(QuestionTableViewCell.self, forCellReuseIdentifier: QuestionTableViewCell.className)
-//        $0.delegate = self
-//        $0.dataSource = self
     }
-    
-    var post = [QuestionTableView]()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
         setupNavigationBarItem()
         view.backgroundColor = .white
+        tableView.dataSource = self
+        tableView.delegate = self
     }
 }
 extension QuestionVC {
@@ -54,13 +53,21 @@ extension QuestionVC {
     }
     
 }
-//extension QuestionVC: UITableViewDataSource, UITableViewDelegate {
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return self.post.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: QuestionTableViewCell.className, for: indexPath) as! QuestionTableViewCell.
-//    }
-//}
+extension QuestionVC {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.postDatas.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: QuestionTableViewCell.className, for: indexPath) as! QuestionTableViewCell
+        
+        cell.profileImageView.image = self.postDatas[indexPath.section].profileImage
+        cell.studentNumber.text = self.postDatas[indexPath.section].studentNumber
+        cell.name.text = self.postDatas[indexPath.section].name
+        cell.title.text = self.postDatas[indexPath.section].title
+        cell.detail.text = self.postDatas[indexPath.section].detail
+        
+        return cell
+    }
+}
