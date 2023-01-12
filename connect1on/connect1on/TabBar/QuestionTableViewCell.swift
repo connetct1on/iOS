@@ -13,8 +13,11 @@ class QuestionTableViewCell: UITableViewCell {
         $0.image = UIImage(named: "love")
 //        $0.layer.cornerRadius = 20
     }
-    let id = UILabel().then {
-        $0.text = "1117 최시훈"
+    let studentNumber = UILabel().then {
+        $0.text = "1117"
+    }
+    let name = UILabel().then {
+        $0.text = "최시훈"
     }
     let title = UILabel().then {
         $0.text = "대소고 준비물"
