@@ -85,7 +85,7 @@ extension SigninVC {
 //                guard let result = try? JSONDecoder().decode(LoginData.self, from: value) else { return }
 //                UserDefaults.standard.set(result.data.token, forKey: "token")
 //            case.failure(let error):
-//                print("통신 오류!\nCode:\(error._code), Message: \(error.errorDescription!)")
+//                print("통신 오류🚫\nCode:\(error._code), Message: \(error.errorDescription!)")
 //            }
 //        }
     }
