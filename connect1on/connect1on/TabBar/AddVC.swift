@@ -30,16 +30,18 @@ class AddVC: UIViewController {
 extension AddVC {
     private func setupNavigationBar() {
         let navigationBar = UINavigationBarAppearance()
-        navigationBar.backgroundColor = .secondColor; navigationController?.navigationBar.standardAppearance = navigationBar
+        navigationBar.backgroundColor = .secondColor;
+        navigationController?.navigationBar.standardAppearance = navigationBar
         navigationController?.navigationBar.scrollEdgeAppearance = navigationBar
     }
     func setupNavigationBarItem() {
-        let backButton = UIBarButtonItem(image: UIImage(systemName: "chevron.left"),
-                                         style: .plain,
-                                         target: self,
-                                         action: #selector(didTabBackButton)
+        var backButton = UIBarButtonItem(
+            image: UIImage(systemName: "chevron.left"),
+            style: .plain,
+            target: self,
+            action: #selector(didTabBackButton)
         )
-        backButton.tintColor = UIColor .black
+        backButton.tintColor = .white
         navigationItem.leftBarButtonItem = backButton
     }
     @objc func didTabBackButton() {
