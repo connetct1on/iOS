@@ -35,14 +35,16 @@ extension AddVC {
         navigationController?.navigationBar.scrollEdgeAppearance = navigationBar
     }
     func setupNavigationBarItem() {
-        var backButton = UIBarButtonItem(
+        let backButton = UIBarButtonItem(
             image: UIImage(systemName: "chevron.left"),
             style: .plain,
             target: self,
             action: #selector(didTabBackButton)
         )
-        backButton.tintColor = .white
+        self.title = "글쓰기"
         navigationItem.leftBarButtonItem = backButton
+        navigationController?.navigationBar.tintColor = .white
+
     }
     @objc func didTabBackButton() {
         self.dismiss(animated: true)
