@@ -9,7 +9,7 @@ import SnapKit
 import Then
 
 class MessageTableViewCell: UITableViewCell {
-    lazy var userProfileImage: UIImageView = {
+    lazy var profileImage: UIImageView = {
         let profileImage = UIImageView().then {
             $0.image = UIImage(named: "love")
             $0.layer.cornerRadius = 20
@@ -21,7 +21,6 @@ class MessageTableViewCell: UITableViewCell {
         label.textColor = .black
         return label
     }()
-    
     //나중에 읽음 표시로 수정할 것
     lazy var detailButton: UIButton = {
         let button = UIButton().then {
@@ -38,16 +37,16 @@ class MessageTableViewCell: UITableViewCell {
         fatalError()
     }
     private func setup() {
-        contentView.addSubview(userProfileImage)
+        contentView.addSubview(profileImage)
         contentView.addSubview(nameLabel)
         contentView.addSubview(detailButton)
-        userProfileImage.snp.makeConstraints { make in
+        profileImage.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(10)
             make.centerY.equalToSuperview()
             make.trailing.lessThanOrEqualTo(detailButton).offset(10)
         }
         nameLabel.snp.makeConstraints { make in
-            make.left.equalTo(userProfileImage).offset(60)
+            make.left.equalTo(profileImage).offset(60)
             make.centerY.equalToSuperview()
             make.right.equalTo(detailButton).offset(10)
         }
