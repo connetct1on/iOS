@@ -17,7 +17,7 @@ class HomeVC: UIViewController {
         $0.contentVerticalAlignment = .fill
         $0.contentHorizontalAlignment = .fill
         $0.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        $0.addTarget(self, action: #selector(didTabLogoBt), for: .touchUpInside)
+        $0.addTarget(HomeVC.self, action: #selector(didTabLogoBt), for: .touchUpInside)
     }
     let schoolFacilitiesBt = UIButton().then {
         $0.setImage(UIImage(named: "playground"), for: .normal)
@@ -26,7 +26,7 @@ class HomeVC: UIViewController {
         $0.contentVerticalAlignment = .fill
         $0.contentHorizontalAlignment = .fill
         $0.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        $0.addTarget(self, action: #selector(didTabFacilitiesBt), for: .touchUpInside)
+        $0.addTarget(HomeVC.self, action: #selector(didTabFacilitiesBt), for: .touchUpInside)
     }
     let schoolEventBt = UIButton().then {
         $0.setImage(UIImage(named: "playground"), for: .normal)
@@ -35,7 +35,7 @@ class HomeVC: UIViewController {
         $0.contentVerticalAlignment = .fill
         $0.contentHorizontalAlignment = .fill
         $0.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        $0.addTarget(self, action: #selector(didTabEventBt), for: .touchUpInside)
+        $0.addTarget(HomeVC.self, action: #selector(didTabEventBt), for: .touchUpInside)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,0 +1,19 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'connect1on' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for connect1on
+
+  target 'connect1onTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'connect1onUITests' do
+    # Pods for testing
+  end
+
+end

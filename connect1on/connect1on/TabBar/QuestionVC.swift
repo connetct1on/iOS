@@ -12,34 +12,31 @@ import SnapKit
 import Kingfisher
 
 class QuestionVC: UIViewController {
-    var datas: [PostDatas] = [
-        PostDatas(profileImage: "as", studentNumber: "asdf1", name: "asdf1", title: "asdf1", detail: "asdf1")
-    ]
+    var datas: [Question] = [/*PostDatas(profileImage: "as", studentNumber: "asdf1", name: "asdf1", title: "asdf1", detail: "asdf1")*/]
     let url = URL(string: "https://ifh.cc/g/J8wf2m.png")
+    var images = ["love"]
     
     let tableView = UITableView(frame: .zero).then {
         $0.backgroundColor = .white
-        $0.register(QuestionTableViewCell.self, forCellReuseIdentifier: "QuestionTableViewCell")
+        $0.register(QuestionTableViewCell.self, forCellReuseIdentifier: QuestionTableViewCell.className)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.reloadData()
+//        self.tableView.reloadData()
         setupTableView()
-        setupNavigationBar()
-        setupNavigationBarItem()
         configureTableView()
         setup()
+        setupNavigationBar()
+        setupNavigationBarItem()
         self.tableView.reloadData()
         view.backgroundColor = .white
     }
-    
+}
+extension QuestionVC {
     func setupTableView(){
         view.addSubview(tableView)
         tableView.snp.makeConstraints{ $0.edges.equalToSuperview()}
     }
-
-}
-extension QuestionVC {
     func configureTableView() {
         tableView.dataSource = self
     }
@@ -89,9 +86,8 @@ extension QuestionVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionTableViewCell", for: indexPath) as? QuestionTableViewCell
-        
-        cell!.profileImageView.text = self.datas[indexPath.row].profileImage
+        let cell = tableView.dequeueReusableCell(withIdentifier: QuestionTableViewCell.className, for: indexPath) as? QuestionTableViewCell
+        cell!.profileImageView.image = self.datas[indexPath.row].profileImageView
         cell!.studentNumber.text = self.datas[indexPath.row].studentNumber
         cell!.name.text = self.datas[indexPath.row].name
         cell!.title.text = self.datas[indexPath.row].title

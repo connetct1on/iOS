@@ -9,16 +9,16 @@ import UIKit
 import SnapKit
 import Then
 class QuestionTableViewCell: UITableViewCell {
-//        let imageView = UIImageView().then {
-//            $0.image = UIImage(named: "love")
-//            $0.layer.cornerRadius = 10
-//            $0.translatesAutoresizingMaskIntoConstraints = false
-//        }
-    let profileImageView = UILabel().then {
-        $0.text = "image"
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.font = .systemFont(ofSize: 14.0, weight: .medium)
-    }
+        let profileImageView = UIImageView().then {
+            $0.image = UIImage(named: "love")
+            $0.layer.cornerRadius = 10
+            $0.translatesAutoresizingMaskIntoConstraints = false
+        }
+//    let profileImageView = UILabel().then {
+//        $0.text = "image"
+//        $0.translatesAutoresizingMaskIntoConstraints = false
+//        $0.font = .systemFont(ofSize: 14.0, weight: .medium)
+//    }
     let studentNumber = UILabel().then {
         $0.text = "1117"
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -90,6 +90,5 @@ class QuestionTableViewCell: UITableViewCell {
             $0.right.equalToSuperview().offset(0)
             $0.bottom.equalToSuperview().offset(0)
         }
-        
     }
 }
