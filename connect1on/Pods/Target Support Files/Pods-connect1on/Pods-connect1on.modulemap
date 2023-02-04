@@ -1,6 +1,0 @@
-framework module Pods_connect1on {
-  umbrella header "Pods-connect1on-umbrella.h"
-
-  export *
-  module * { export * }
-}
