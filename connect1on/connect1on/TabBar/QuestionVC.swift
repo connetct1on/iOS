@@ -43,7 +43,7 @@ extension QuestionVC {
     
     func setup() {
         [
-            tableView
+            tableView 
         ].forEach{ self.view.addSubview($0)
         }
         tableView.snp.makeConstraints {

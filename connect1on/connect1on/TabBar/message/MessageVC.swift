@@ -21,7 +21,7 @@ class MessageVC: MessagesViewController {
         return button
     }()
     
-    let stack: TableView
+    let stack: Channel
     var sender = Sender(senderId: "id", displayName: "sihun")
     var messages = [Message]()
     private var isSendingPhoto = false {
@@ -35,7 +35,7 @@ class MessageVC: MessagesViewController {
         }
     }
     
-    init(Stack: TableView) {
+    init(Stack: Channel) {
         self.stack = Stack
         super.init(nibName: nil, bundle: nil)
     }
@@ -46,7 +46,6 @@ class MessageVC: MessagesViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupDelegates()
         setup()
         setupMessageInputBar()
@@ -62,16 +61,13 @@ class MessageVC: MessagesViewController {
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
-        
         messageInputBar.delegate = self
     }
-    
     private func setup() {
         title = stack.name
         navigationController?.navigationBar.prefersLargeTitles = false
         //                messages = getMessagesMock()
     }
-    
     private func setupMessageInputBar() {
         messageInputBar.inputTextView.tintColor = .mainColor
         messageInputBar.sendButton.setTitleColor(.mainColor, for: .normal)

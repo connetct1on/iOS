@@ -7,8 +7,8 @@
 
 import UIKit
 
-func getStackMocks() -> [TableView] {
-    return (0...0).map { TableView(profileImage:  UIImage(named: "love"), id: String($0), name: "최시훈 " + String($0)) }
+func getStackMocks() -> [Channel] {
+    return (0...0).map { Channel(profileImage:  UIImage(named: "love"), id: String($0), name: "최시훈 " + String($0)) }
 }
 
 //func getMessagesMock() -> [Message] {

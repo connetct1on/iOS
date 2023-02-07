@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct TableView {
+struct Channel {
     var profileImage: UIImage?
     var id: String?
     let name: String
@@ -19,12 +19,12 @@ struct TableView {
     }
 }
 
-extension TableView: Comparable {
-    static func == (lhs: TableView, rhs: TableView) -> Bool {
+extension Channel: Comparable {
+    static func == (lhs: Channel, rhs: Channel) -> Bool {
         return lhs.id == rhs.id
     }
     
-    static func < (lhs: TableView, rhs: TableView) -> Bool {
+    static func < (lhs: Channel, rhs: Channel) -> Bool {
         return lhs.name < rhs.name
     }
 }

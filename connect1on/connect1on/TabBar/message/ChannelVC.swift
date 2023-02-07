@@ -10,8 +10,8 @@ import Then
 import SnapKit
 import MessageKit
 
-class JunctionVC: UIViewController {
-    lazy var JunctionView: UITableView = {
+class ChannelVC: UIViewController {
+    lazy var channelView: UITableView = {
         let view = UITableView()
         view.register(MessageTableViewCell.self, forCellReuseIdentifier: MessageTableViewCell.className)
         view.delegate = self
@@ -20,7 +20,7 @@ class JunctionVC: UIViewController {
         return view
     }()
     
-    var Messages = [TableView]()
+    var Messages = [Channel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,29 +29,26 @@ class JunctionVC: UIViewController {
     }
     
     private func setup() {
-        view.addSubview(JunctionView)
-        JunctionView.snp.makeConstraints { make in
+        view.addSubview(channelView)
+        channelView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
         Messages = getStackMocks()
     }
 }
 
-extension JunctionVC: UITableViewDataSource, UITableViewDelegate {
+extension ChannelVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Messages.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MessageTableViewCell.className, for: indexPath) as! MessageTableViewCell
         cell.nameLabel.text = Messages[indexPath.row].name
         return cell
     }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 55
     }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = Messages[indexPath.row]
         let viewController = MessageVC(Stack: cell)

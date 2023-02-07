@@ -46,14 +46,14 @@ class HomeVC: UIViewController {
         self.navigationController?.navigationBar.tintColor = .white
     }
 }
-extension HomeVC{
+extension HomeVC {
     @objc func didTabLogoBt() {
         print("didTabLogoBt")
         let url = URL(string: "https://www.dgsw.hs.kr")
         UIApplication.shared.open(url!, options: [:] )
     }
     @objc func didTabMessageButton() {
-        let VC = JunctionVC()
+        let VC = ChannelVC()
         VC.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(VC, animated: true)
     }
@@ -72,10 +72,8 @@ extension HomeVC{
         navigationBar.backgroundColor = .mainColor; navigationController?.navigationBar.standardAppearance = navigationBar
         navigationController?.navigationBar.scrollEdgeAppearance = navigationBar
     }
-    
-    
+
     private func setupNavigationBarItem() {
-        
         let messageButton = UIBarButtonItem(
             image: UIImage(systemName: "paperplane"),
             style: .plain,
@@ -84,6 +82,7 @@ extension HomeVC{
         )
         navigationItem.rightBarButtonItem = messageButton
     }
+    
     func setup() {
         [
             homePageBt, schoolFacilitiesBt, schoolEventBt
@@ -93,21 +92,18 @@ extension HomeVC{
             $0.bottom.equalToSuperview().offset(-670)
             $0.left.equalToSuperview().offset(40)
             $0.right.equalToSuperview().offset(-40)
-            
         }
         schoolFacilitiesBt.snp.makeConstraints {
             $0.top.equalTo(homePageBt.snp.bottom).offset(50)
             $0.bottom.equalTo(homePageBt.snp.bottom).offset(230)
             $0.left.equalToSuperview().offset(40)
             $0.right.equalToSuperview().offset(-40)
-            
         }
         schoolEventBt.snp.makeConstraints {
             $0.top.equalTo(homePageBt.snp.bottom).offset(280)
             $0.bottom.equalTo(homePageBt.snp.bottom).offset(460)
             $0.left.equalToSuperview().offset(40)
             $0.right.equalToSuperview().offset(-40)
-            
         }
     }
 }
