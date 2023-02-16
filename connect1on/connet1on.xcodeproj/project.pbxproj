@@ -216,6 +216,15 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		85488F39299BD9DC003FE4D6 /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				859E1FA02921314400571D79 /* QuestionVC.swift */,
+				85F6AF792968949100FCFB4C /* QuestionTableViewCell.swift */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
 		859AF2AB293F98AE001155E6 /* message */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,11 +273,10 @@
 			isa = PBXGroup;
 			children = (
 				859E1F9C2921306000571D79 /* TabBarcontroller.swift */,
-				859E1FA02921314400571D79 /* QuestionVC.swift */,
-				85F6AF792968949100FCFB4C /* QuestionTableViewCell.swift */,
 				8542293829677DF3009FDE3F /* AddVC.swift */,
 				85E2EEA729266121000636BC /* ProfileVC.swift */,
 				858024EF2938D483003BBF05 /* SetVC.swift */,
+				85488F39299BD9DC003FE4D6 /* Question */,
 				8531E19F294CFDDB00C78AAF /* Home */,
 				859AF2AB293F98AE001155E6 /* message */,
 			);

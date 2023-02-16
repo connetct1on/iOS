@@ -8,14 +8,14 @@
 import UIKit
 
 struct Question {
-    var profileImageView: UIImage?
+    var profileImage: UIImage?
     var studentNumber: String?
     var name: String?
     var title: String?
     var detail: String?
     
-    init(profileImageView: UIImage, studentNumber: String, name: String, title: String, detail: String) {
-        self.profileImageView = profileImageView
+    init(profileImage: UIImage, studentNumber: String, name: String, title: String, detail: String) {
+        self.profileImage = profileImage
         self.studentNumber = studentNumber
         self.name = name
         self.title = title

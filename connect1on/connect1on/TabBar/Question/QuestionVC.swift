@@ -12,7 +12,7 @@ import SnapKit
 import Kingfisher
 
 class QuestionVC: UIViewController {
-    var datas: [Question] = [/*PostDatas(profileImage: "as", studentNumber: "asdf1", name: "asdf1", title: "asdf1", detail: "asdf1")*/]
+    var datas: [Question] = []
     let url = URL(string: "https://ifh.cc/g/J8wf2m.png")
     var images = ["love"]
     
@@ -22,7 +22,7 @@ class QuestionVC: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.tableView.reloadData()
+        getQuestionMocks()
         setupTableView()
         configureTableView()
         setup()
@@ -87,7 +87,6 @@ extension QuestionVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: QuestionTableViewCell.className, for: indexPath) as? QuestionTableViewCell
-        cell!.profileImageView.image = self.datas[indexPath.row].profileImageView
         cell!.studentNumber.text = self.datas[indexPath.row].studentNumber
         cell!.name.text = self.datas[indexPath.row].name
         cell!.title.text = self.datas[indexPath.row].title

@@ -52,7 +52,7 @@ class SigninVC: UIViewController {
         $0.backgroundColor = .mainColor
         $0.setTitle("로그인", for: .normal)
         $0.layer.cornerRadius = 20
-        $0.addTarget(self, action: #selector(TabsigninBt), for: .touchUpInside)
+        $0.addTarget(SigninVC(), action: #selector(TabsigninBt), for: .touchUpInside)
     }
     
     override func viewDidLoad() {
@@ -69,8 +69,8 @@ extension SigninVC {
         print(id, pw)
 //        AF.request("\(api)/user/signin.do",
 //                   method: .post,
-//                   parameters: ["empnum": Login.id,
-//                                "password": Login.pw],
+//                   parameters: ["empnum": id,
+//                                "password": pw],
 //                   encoding : JSONEncoding.default,
 //                   headers: ["Content-Type": "application/json"]
 //        )

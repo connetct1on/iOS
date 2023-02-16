@@ -11,14 +11,16 @@ import Then
 
 
 class SetVC: UIViewController {
+//    let tableView: UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        
+//        setup()
     }
 }
 extension SetVC {
+//    func
 //    func setup() {
 //        [
 //            tableView

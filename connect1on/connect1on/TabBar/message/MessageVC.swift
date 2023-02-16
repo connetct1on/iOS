@@ -9,7 +9,6 @@ import UIKit
 import MessageKit
 import InputBarAccessoryView
 import Photos
-import Alamofire
 
 class MessageVC: MessagesViewController {
     
