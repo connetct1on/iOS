@@ -49,6 +49,8 @@
 		85E2EED5292946A5000636BC /* Font.otf in Resources */ = {isa = PBXBuildFile; fileRef = 85E2EED32929439C000636BC /* Font.otf */; };
 		85F6AF7A2968949100FCFB4C /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F6AF792968949100FCFB4C /* QuestionTableViewCell.swift */; };
 		85F6AF7C296AEB9400FCFB4C /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F6AF7B296AEB9400FCFB4C /* Question.swift */; };
+		85FF41B329A4DD1B00174486 /* Soket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FF41B229A4DD1B00174486 /* Soket.swift */; };
+		85FF41B729A4DE2A00174486 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 85FF41B629A4DE2A00174486 /* SocketIO */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,7 @@
 		85E2EED32929439C000636BC /* Font.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Font.otf; sourceTree = "<group>"; };
 		85F6AF792968949100FCFB4C /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		85F6AF7B296AEB9400FCFB4C /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		85FF41B229A4DD1B00174486 /* Soket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Soket.swift; sourceTree = "<group>"; };
 		9069A682E87E154FF4A8A14A /* Pods-connect1on.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-connect1on.debug.xcconfig"; path = "Target Support Files/Pods-connect1on/Pods-connect1on.debug.xcconfig"; sourceTree = "<group>"; };
 		960D1ACFE15C91BFD584D495 /* Pods-connect1on.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-connect1on.release.xcconfig"; path = "Target Support Files/Pods-connect1on/Pods-connect1on.release.xcconfig"; sourceTree = "<group>"; };
 		C1781B4CA31F9818F435AA2D /* Pods_connect1onTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_connect1onTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +127,7 @@
 				85707497298A2C7B00E933BE /* Kingfisher in Frameworks */,
 				8556F45C2962E6DA0000B03E /* FirebaseFirestore in Frameworks */,
 				8570749D298EA22A00E933BE /* Then in Frameworks */,
+				85FF41B729A4DE2A00174486 /* SocketIO in Frameworks */,
 				8570749A298EA1F900E933BE /* SnapKit in Frameworks */,
 				8556F45A2962E6DA0000B03E /* FirebaseAuth in Frameworks */,
 				8505CDCB2953F9DF008E4932 /* MessageKit in Frameworks */,
@@ -231,6 +235,7 @@
 				859D1339294634590003634D /* ChannelVC.swift */,
 				8510C2FF292F81950093BD1A /* MessageVC.swift */,
 				8505CDD72954569C008E4932 /* View */,
+				85FF41B429A4DD2100174486 /* Soket */,
 			);
 			path = message;
 			sourceTree = "<group>";
@@ -291,6 +296,14 @@
 			path = login;
 			sourceTree = "<group>";
 		};
+		85FF41B429A4DD2100174486 /* Soket */ = {
+			isa = PBXGroup;
+			children = (
+				85FF41B229A4DD1B00174486 /* Soket.swift */,
+			);
+			path = Soket;
+			sourceTree = "<group>";
+		};
 		A13477B22D047A5D67ABEDC7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +344,7 @@
 				85707499298EA1F900E933BE /* SnapKit */,
 				8570749C298EA22A00E933BE /* Then */,
 				8570749F298EA36900E933BE /* Alamofire */,
+				85FF41B629A4DE2A00174486 /* SocketIO */,
 			);
 			productName = connect1on;
 			productReference = 859E1F68292129CA00571D79 /* connect1on.app */;
@@ -413,6 +427,7 @@
 				85707498298EA1F900E933BE /* XCRemoteSwiftPackageReference "SnapKit" */,
 				8570749B298EA22A00E933BE /* XCRemoteSwiftPackageReference "Then" */,
 				8570749E298EA36900E933BE /* XCRemoteSwiftPackageReference "Alamofire" */,
+				85FF41B529A4DE2A00174486 /* XCRemoteSwiftPackageReference "socket" */,
 			);
 			productRefGroup = 859E1F69292129CA00571D79 /* Products */;
 			projectDirPath = "";
@@ -532,6 +547,7 @@
 				85E2EEA829266121000636BC /* ProfileVC.swift in Sources */,
 				859E1FA12921314400571D79 /* QuestionVC.swift in Sources */,
 				859D133A294634590003634D /* ChannelVC.swift in Sources */,
+				85FF41B329A4DD1B00174486 /* Soket.swift in Sources */,
 				858024F02938D483003BBF05 /* SetVC.swift in Sources */,
 				858024B829378E4E003BBF05 /* Signin API.swift in Sources */,
 				858024B62937806C003BBF05 /* API.swift in Sources */,
@@ -940,6 +956,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		85FF41B529A4DE2A00174486 /* XCRemoteSwiftPackageReference "socket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -987,6 +1011,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8570749E298EA36900E933BE /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		85FF41B629A4DE2A00174486 /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85FF41B529A4DE2A00174486 /* XCRemoteSwiftPackageReference "socket" */;
+			productName = SocketIO;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
