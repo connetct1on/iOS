@@ -48,7 +48,6 @@ class HomeVC: UIViewController {
 }
 extension HomeVC {
     @objc func didTabLogoBt() {
-        print("didTabLogoBt")
         let url = URL(string: "https://www.dgsw.hs.kr")
         UIApplication.shared.open(url!, options: [:] )
     }
