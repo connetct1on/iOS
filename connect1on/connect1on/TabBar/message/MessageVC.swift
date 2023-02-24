@@ -9,20 +9,15 @@ import UIKit
 import MessageKit
 import InputBarAccessoryView
 import Photos
+import Starscream
 
-class MessageVC: MessagesViewController {
+class MessageVC: MessagesViewController, WebSocketDelegate {
     
-    lazy var cameraBarButtonItem: InputBarButtonItem = {
-        let button = InputBarButtonItem(type: .system)
-        button.tintColor = .mainColor
-        button.image = UIImage(systemName: "camera")
-        button.addTarget(self, action: #selector(didTapCameraButton), for: .touchUpInside)
-        return button
-    }()
     
+    var socket: WebSocket?
     let stack: Channel
-    var sender = Sender(senderId: "id", displayName: "sihun")
-    var messages = [Message]()
+    var sender = Sender(senderId: "asdfasdfdddd", displayName: "sihun")
+    var messages: [Message] = []
     private var isSendingPhoto = false {
         didSet {
             messageInputBar.leftStackViewItems.forEach { item in
@@ -49,13 +44,13 @@ class MessageVC: MessagesViewController {
         setup()
         setupMessageInputBar()
         removeOutgoingMessageAvatars()
-        addCameraBarButtonToMessageInputBar()
+        setupWebSocket()
     }
+    
     
     deinit {
         navigationController?.navigationBar.prefersLargeTitles = true
     }
-    
     private func setupDelegates() {
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
@@ -82,29 +77,13 @@ class MessageVC: MessagesViewController {
         layout.setMessageOutgoingMessageTopLabelAlignment(outgoingLabelAlignment)
     }
     
-    private func addCameraBarButtonToMessageInputBar() {
-        messageInputBar.leftStackView.alignment = .center
-        messageInputBar.setLeftStackViewWidthConstant(to: 50, animated: false)
-        messageInputBar.setStackViewItems([cameraBarButtonItem], forStack: .left, animated: false)
-    }
-    
     private func insertNewMessage(_ message: Message) {
         messages.append(message)
         messages.sort()
         messagesCollectionView.reloadData()
     }
     
-    @objc private func didTapCameraButton() {
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            picker.sourceType = .camera
-        } else {
-            picker.sourceType = .photoLibrary
-        }
-        present(picker, animated: true)
-    }
+    
 }
 
 // 오류 고침
@@ -126,6 +105,15 @@ extension MessageVC: MessagesDataSource {
         return NSAttributedString(string: name, attributes: [.font: UIFont.preferredFont(forTextStyle: .caption1),
                                                              .foregroundColor: UIColor(white: 0.3, alpha: 1)])
     }
+    func cellTopLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
+        // 날짜 레이블에 날짜 정보를 표시하기 위한 코드
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        let dateString = formatter.string(from: message.sentDate)
+        return NSAttributedString(string: dateString)
+    }
+    
 }
 
 extension MessageVC: MessagesLayoutDelegate {
@@ -164,37 +152,6 @@ extension MessageVC: InputBarAccessoryViewDelegate {
         let message = Message(content: text)
         insertNewMessage(message)
         inputBar.inputTextView.text.removeAll()
-    }
-}
-
-extension MessageVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        picker.dismiss(animated: true)
-        
-        if let asset = info[.phAsset] as? PHAsset {
-            let imageSize = CGSize(width: 500, height: 500)
-            PHImageManager.default().requestImage(for: asset,
-                                                  targetSize: imageSize,
-                                                  contentMode: .aspectFit,
-                                                  options: nil) { image, _ in
-                guard let image = image else { return }
-                self.sendPhoto(image)
-            }
-        } else if let image = info[.originalImage] as? UIImage {
-            sendPhoto(image)
-        }
-    }
-    
-    private func sendPhoto(_ image: UIImage) {
-        isSendingPhoto = true
-        isSendingPhoto = false
-        let message = Message(image: image)
-        insertNewMessage(message)
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true)
-        
     }
 }
 
