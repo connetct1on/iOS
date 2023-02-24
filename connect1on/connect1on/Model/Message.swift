@@ -45,6 +45,7 @@ struct Message: MessageType {
         content = ""
         id = nil
     }
+    
 }
 
 extension Message: Comparable {
