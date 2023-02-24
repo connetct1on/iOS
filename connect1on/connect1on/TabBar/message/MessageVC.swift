@@ -152,6 +152,58 @@ extension MessageVC: InputBarAccessoryViewDelegate {
         let message = Message(content: text)
         insertNewMessage(message)
         inputBar.inputTextView.text.removeAll()
+        do {
+            let sanderData: [String: Any] = [
+                "type":"ENTER",
+                "roomId":"34ce07dd-7c66-4d5c-ae77-2544fb35c875",
+                "sender":"뭘 봐 이 개복치같은 친구야",
+                "message":inputBar.inputTextView.text!
+            ]
+            let jsonData = try JSONSerialization.data(withJSONObject: sanderData, options: .prettyPrinted)
+            let stringData = String(data: jsonData, encoding: .utf8)!
+            socket!.write(string: stringData)
+        }
+        catch {
+            print("🤬\(error)😡")
+        }
     }
 }
+extension MessageVC {
+    func didReceive(event: Starscream.WebSocketEvent, client: Starscream.WebSocket) {
+        switch event {
+        case .connected(_):
+            print("WebSocket connected")
+        case .disconnected(let reason, let code):
+            print("WebSocket disconnected with code: \(code), reason: \(reason)")
+        case .text(let message):
+            print("Received message: \(message)")
+        case .binary(let data):
+            print("Received data: \(data)")
+        case .ping(_):
+            break
+        case .pong(_):
+            break
+        case .viabilityChanged(_):
+            break
+        case .reconnectSuggested(_):
+            break
+        case .cancelled:
+            break
+        case .error(let error):
+            print("WebSocket error: \(String(describing: error))")
+        }
+    }
+}
+
+extension MessageVC {
+    private func setupWebSocket() {
+        let url = URL(string: "ws://220.94.98.54:7999/rt/chat")!
+        var request = URLRequest(url: url)
+        request.timeoutInterval = 5
+        socket = WebSocket(request: request)
+        socket?.delegate = self
+        socket?.connect()
+    }
+}
+
 
