@@ -21,8 +21,7 @@ class SigninVC: UIViewController {
     }
     let logolb = UILabel().then {
         $0.text = "ALT"
-        $0.font = UIFont(name: "GangwonEduAll-OTFBold", size:150)
-        $0.font.withSize(58)
+        $0.font = .systemFont(ofSize: 150.0, weight: .medium)
         $0.textAlignment = .center //가운데 정렬
     }
     let idlb = UILabel().then {
@@ -30,7 +29,7 @@ class SigninVC: UIViewController {
         $0.text = " ID"
     }
     lazy var idTextField = UITextField().then {
-        $0.placeholder = "  아이디를 입력해주세요"
+        $0.placeholder = "아이디를 입력해주세요"
         $0.font = .systemFont(ofSize: 14.0, weight: .medium)
         $0.autocapitalizationType = .none
         $0.backgroundColor = .secondColor
@@ -41,7 +40,7 @@ class SigninVC: UIViewController {
         $0.font = UIFont(name: "GangwonEduAll-OTFBold", size: 20)
     }
     lazy var pwTextField = UITextField().then {
-        $0.placeholder = "  비밀번호를 입력해주세요"
+        $0.placeholder = "비밀번호를 입력해주세요"
         $0.font = .systemFont(ofSize: 14.0, weight: .medium)
         $0.autocapitalizationType = .none
         $0.isSecureTextEntry = true
@@ -52,7 +51,7 @@ class SigninVC: UIViewController {
         $0.backgroundColor = .mainColor
         $0.setTitle("로그인", for: .normal)
         $0.layer.cornerRadius = 20
-        $0.addTarget(SigninVC(), action: #selector(TabsigninBt), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(TabsigninBt), for: .touchUpInside)
     }
     
     override func viewDidLoad() {
@@ -67,39 +66,38 @@ extension SigninVC {
         let id = idTextField.text!
         let pw = pwTextField.text!
         print(id, pw)
-//        AF.request("\(api)/user/signin.do",
-//                   method: .post,
-//                   parameters: ["empnum": id,
-//                                "password": pw],
-//                   encoding : JSONEncoding.default,
-//                   headers: ["Content-Type": "application/json"]
-//        )
-//        .validate()
-//        .responseData { response in
-//            switch response.result {
-//            case.success:
+        AF.request("\(api)/user/signin.do",
+                   method: .post,
+                   parameters: ["emil": id,
+                                "password": pw],
+                   encoding : JSONEncoding.default,
+                   headers: ["Content-Type": "application/json"]
+        )
+        .validate()
+        .responseData { response in
+            switch response.result {
+            case.success:
                 let VC = TabBarcontroller()
                 VC.modalPresentationStyle = .fullScreen
                 self.present(VC, animated: true, completion: nil)
-//                guard let value = response.value else { return }
-//                guard let result = try? JSONDecoder().decode(LoginData.self, from: value) else { return }
-//                UserDefaults.standard.set(result.data.token, forKey: "token")
-//            case.failure(let error):
-//                print("통신 오류!\nCode:\(error._code), Message: \(error.errorDescription!)")
-//            }
-//        }
+                guard let value = response.value else { return }
+                guard let result = try? JSONDecoder().decode(LoginData.self, from: value) else { return }
+                UserDefaults.standard.set(result.data.token, forKey: "token")
+            case.failure(let error):
+                print("통신 오류!\nCode:\(error._code), Message: \(error.errorDescription!)")
+            }
+        }
     }
     
     func setup() {
         [
             logolb, idlb, idTextField, pwTextField, pwlb, pwTextField, signinBt
-        ].forEach{ self.view.addSubview($0)
-        }
+        ].forEach{ self.view.addSubview($0) }
         logolb.snp.makeConstraints {
             $0.top.equalToSuperview().offset(120)
             $0.bottom.equalTo(idTextField.snp.top).offset(-50)
-            $0.left.equalToSuperview().offset(70)
-            $0.right.equalToSuperview().offset(-70)
+            $0.left.equalToSuperview().offset(0)
+            $0.right.equalToSuperview().offset(0)
         }
         idlb.snp.makeConstraints {
             $0.top.equalTo(idTextField.snp.top).offset(-25)

@@ -22,7 +22,7 @@ class QuestionVC: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        getQuestionMocks()
+//        getQuestionMocks()
         setupTableView()
         configureTableView()
         setup()
@@ -47,11 +47,10 @@ extension QuestionVC {
         ].forEach{ self.view.addSubview($0)
         }
         tableView.snp.makeConstraints {
-            $0.top.bottom.equalToSuperview().offset(90)
+            $0.top.equalToSuperview().offset(90)
+            $0.bottom.equalToSuperview().offset(-83)
             $0.left.right.equalToSuperview().offset(0)
-            
         }
-        
     }
     
     func setupNavigationBar() {
@@ -59,6 +58,7 @@ extension QuestionVC {
         navigationBarAppearance.backgroundColor = UIColor(red: 10.0/255, green:0.0/255, blue:114.0/255, alpha: 1)
         navigationController?.navigationBar.standardAppearance = navigationBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance
+        navigationBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.red]
     }
     
     func setupNavigationBarItem() {
@@ -70,7 +70,6 @@ extension QuestionVC {
         )
         navigationItem.title = "love"
         navigationController?.navigationBar.tintColor = .white
-        navigationItem.titleView?.tintColor = .white
         navigationItem.rightBarButtonItem = AddBt
     }
     
