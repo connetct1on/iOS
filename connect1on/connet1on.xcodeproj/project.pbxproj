@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F682A04D7050D3B69F40212 /* Pods_connect1on.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECEF81D1BBB7534CA924527A /* Pods_connect1on.framework */; };
 		8505CDCB2953F9DF008E4932 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8505CDCA2953F9DF008E4932 /* MessageKit */; };
 		8505CDD129540046008E4932 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDD029540046008E4932 /* MessageTableViewCell.swift */; };
 		8505CDDC29547362008E4932 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDDB29547362008E4932 /* Channel.swift */; };
@@ -20,10 +21,6 @@
 		8531E1A1294D042200C78AAF /* FacilitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531E1A0294D042200C78AAF /* FacilitiesVC.swift */; };
 		8531E1A3294D049C00C78AAF /* EventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531E1A2294D049C00C78AAF /* EventVC.swift */; };
 		8542293929677DF3009FDE3F /* AddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8542293829677DF3009FDE3F /* AddVC.swift */; };
-		8556F45A2962E6DA0000B03E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8556F4592962E6DA0000B03E /* FirebaseAuth */; };
-		8556F45C2962E6DA0000B03E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8556F45B2962E6DA0000B03E /* FirebaseFirestore */; };
-		8556F45E2962E6DA0000B03E /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8556F45D2962E6DA0000B03E /* FirebaseFirestoreSwift */; };
-		8556F4602962E6DA0000B03E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8556F45F2962E6DA0000B03E /* FirebaseStorage */; };
 		85707497298A2C7B00E933BE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 85707496298A2C7B00E933BE /* Kingfisher */; };
 		8570749A298EA1F900E933BE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 85707499298EA1F900E933BE /* SnapKit */; };
 		8570749D298EA22A00E933BE /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 8570749C298EA22A00E933BE /* Then */; };
@@ -46,8 +43,6 @@
 		85EB631E29A6618600BAD73F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8556F4562962DDF70000B03E /* GoogleService-Info.plist */; };
 		85F6AF7A2968949100FCFB4C /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F6AF792968949100FCFB4C /* QuestionTableViewCell.swift */; };
 		85F6AF7C296AEB9400FCFB4C /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F6AF7B296AEB9400FCFB4C /* Question.swift */; };
-		85FF41B329A4DD1B00174486 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FF41B229A4DD1B00174486 /* Socket.swift */; };
-		85FF41B729A4DE2A00174486 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 85FF41B629A4DE2A00174486 /* SocketIO */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0EF3EC1BF4481C0A5116F55A /* Pods-connect1on.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-connect1on.release.xcconfig"; path = "Target Support Files/Pods-connect1on/Pods-connect1on.release.xcconfig"; sourceTree = "<group>"; };
 		8505CDD029540046008E4932 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		8505CDDB29547362008E4932 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Channel.swift; path = connect1on/TabBar/message/Channel.swift; sourceTree = SOURCE_ROOT; };
 		8505CDDD295486A7008E4932 /* NSObjc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjc.swift; sourceTree = "<group>"; };
@@ -102,7 +98,8 @@
 		85EB631B29A65E4000BAD73F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		85F6AF792968949100FCFB4C /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		85F6AF7B296AEB9400FCFB4C /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		85FF41B229A4DD1B00174486 /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		8F77A456DB435EBD3A0A445D /* Pods-connect1on.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-connect1on.debug.xcconfig"; path = "Target Support Files/Pods-connect1on/Pods-connect1on.debug.xcconfig"; sourceTree = "<group>"; };
+		ECEF81D1BBB7534CA924527A /* Pods_connect1on.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_connect1on.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,15 +108,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				857074A0298EA36900E933BE /* Alamofire in Frameworks */,
-				8556F45E2962E6DA0000B03E /* FirebaseFirestoreSwift in Frameworks */,
 				85707497298A2C7B00E933BE /* Kingfisher in Frameworks */,
-				8556F45C2962E6DA0000B03E /* FirebaseFirestore in Frameworks */,
 				8570749D298EA22A00E933BE /* Then in Frameworks */,
-				85FF41B729A4DE2A00174486 /* SocketIO in Frameworks */,
 				8570749A298EA1F900E933BE /* SnapKit in Frameworks */,
-				8556F45A2962E6DA0000B03E /* FirebaseAuth in Frameworks */,
 				8505CDCB2953F9DF008E4932 /* MessageKit in Frameworks */,
-				8556F4602962E6DA0000B03E /* FirebaseStorage in Frameworks */,
+				1F682A04D7050D3B69F40212 /* Pods_connect1on.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +203,6 @@
 				859D1339294634590003634D /* ChannelVC.swift */,
 				8510C2FF292F81950093BD1A /* MessageVC.swift */,
 				8505CDD72954569C008E4932 /* View */,
-				85FF41B429A4DD2100174486 /* Soket */,
 			);
 			path = message;
 			sourceTree = "<group>";
@@ -220,6 +212,8 @@
 			children = (
 				859E1F6A292129CA00571D79 /* connect1on */,
 				859E1F69292129CA00571D79 /* Products */,
+				A44E4F42499A9298F5BAFFCB /* Pods */,
+				DEE05198C91B2FCB3F66D626 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -269,12 +263,21 @@
 			path = login;
 			sourceTree = "<group>";
 		};
-		85FF41B429A4DD2100174486 /* Soket */ = {
+		A44E4F42499A9298F5BAFFCB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				85FF41B229A4DD1B00174486 /* Socket.swift */,
+				8F77A456DB435EBD3A0A445D /* Pods-connect1on.debug.xcconfig */,
+				0EF3EC1BF4481C0A5116F55A /* Pods-connect1on.release.xcconfig */,
 			);
-			path = Soket;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DEE05198C91B2FCB3F66D626 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECEF81D1BBB7534CA924527A /* Pods_connect1on.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,8 +287,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 859E1F92292129CB00571D79 /* Build configuration list for PBXNativeTarget "connect1on" */;
 			buildPhases = (
+				34A14236248937F37B7935AA /* [CP] Check Pods Manifest.lock */,
 				859E1F64292129CA00571D79 /* Sources */,
 				859E1F65292129CA00571D79 /* Frameworks */,
+				F3A8F66469E9EA1C23E3D254 /* [CP] Embed Pods Frameworks */,
 				859E1F66292129CA00571D79 /* Resources */,
 			);
 			buildRules = (
@@ -295,15 +300,10 @@
 			name = connect1on;
 			packageProductDependencies = (
 				8505CDCA2953F9DF008E4932 /* MessageKit */,
-				8556F4592962E6DA0000B03E /* FirebaseAuth */,
-				8556F45B2962E6DA0000B03E /* FirebaseFirestore */,
-				8556F45D2962E6DA0000B03E /* FirebaseFirestoreSwift */,
-				8556F45F2962E6DA0000B03E /* FirebaseStorage */,
 				85707496298A2C7B00E933BE /* Kingfisher */,
 				85707499298EA1F900E933BE /* SnapKit */,
 				8570749C298EA22A00E933BE /* Then */,
 				8570749F298EA36900E933BE /* Alamofire */,
-				85FF41B629A4DE2A00174486 /* SocketIO */,
 			);
 			productName = connect1on;
 			productReference = 859E1F68292129CA00571D79 /* connect1on.app */;
@@ -379,12 +379,10 @@
 			mainGroup = 859E1F5F292129CA00571D79;
 			packageReferences = (
 				8505CDC92953F9DF008E4932 /* XCRemoteSwiftPackageReference "MessageKit" */,
-				8556F4582962E6DA0000B03E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				85707495298A2C7B00E933BE /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				85707498298EA1F900E933BE /* XCRemoteSwiftPackageReference "SnapKit" */,
 				8570749B298EA22A00E933BE /* XCRemoteSwiftPackageReference "Then" */,
 				8570749E298EA36900E933BE /* XCRemoteSwiftPackageReference "Alamofire" */,
-				85FF41B529A4DE2A00174486 /* XCRemoteSwiftPackageReference "socket" */,
 			);
 			productRefGroup = 859E1F69292129CA00571D79 /* Products */;
 			projectDirPath = "";
@@ -425,6 +423,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		34A14236248937F37B7935AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-connect1on-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3A8F66469E9EA1C23E3D254 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-connect1on/Pods-connect1on-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-connect1on/Pods-connect1on-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-connect1on/Pods-connect1on-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		859E1F64292129CA00571D79 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -435,7 +475,6 @@
 				85E2EEA829266121000636BC /* ProfileVC.swift in Sources */,
 				859E1FA12921314400571D79 /* QuestionVC.swift in Sources */,
 				859D133A294634590003634D /* ChannelVC.swift in Sources */,
-				85FF41B329A4DD1B00174486 /* Socket.swift in Sources */,
 				858024F02938D483003BBF05 /* SetVC.swift in Sources */,
 				858024B829378E4E003BBF05 /* Signin.swift in Sources */,
 				858024B62937806C003BBF05 /* API.swift in Sources */,
@@ -617,6 +656,7 @@
 		};
 		859E1F93292129CB00571D79 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F77A456DB435EBD3A0A445D /* Pods-connect1on.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -646,6 +686,7 @@
 		};
 		859E1F94292129CB00571D79 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EF3EC1BF4481C0A5116F55A /* Pods-connect1on.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -798,14 +839,6 @@
 				kind = branch;
 			};
 		};
-		8556F4582962E6DA0000B03E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
-			};
-		};
 		85707495298A2C7B00E933BE /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -838,14 +871,6 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		85FF41B529A4DE2A00174486 /* XCRemoteSwiftPackageReference "socket" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -853,26 +878,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8505CDC92953F9DF008E4932 /* XCRemoteSwiftPackageReference "MessageKit" */;
 			productName = MessageKit;
-		};
-		8556F4592962E6DA0000B03E /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8556F4582962E6DA0000B03E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		8556F45B2962E6DA0000B03E /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8556F4582962E6DA0000B03E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-		8556F45D2962E6DA0000B03E /* FirebaseFirestoreSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8556F4582962E6DA0000B03E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestoreSwift;
-		};
-		8556F45F2962E6DA0000B03E /* FirebaseStorage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8556F4582962E6DA0000B03E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseStorage;
 		};
 		85707496298A2C7B00E933BE /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -893,11 +898,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8570749E298EA36900E933BE /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		85FF41B629A4DE2A00174486 /* SocketIO */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 85FF41B529A4DE2A00174486 /* XCRemoteSwiftPackageReference "socket" */;
-			productName = SocketIO;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
