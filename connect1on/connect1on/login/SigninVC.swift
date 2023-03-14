@@ -63,30 +63,30 @@ class SigninVC: UIViewController {
 }
 extension SigninVC {
     @objc func TabsigninBt() {
-        let id = idTextField.text!
-        let pw = pwTextField.text!
-        print(id, pw)
-        AF.request("\(api)/user/signin.do",
-                   method: .post,
-                   parameters: ["emil": id,
-                                "password": pw],
-                   encoding : JSONEncoding.default,
-                   headers: ["Content-Type": "application/json"]
-        )
-        .validate()
-        .responseData { response in
-            switch response.result {
-            case.success:
+//        let id = idTextField.text!
+//        let pw = pwTextField.text!
+//        print(id, pw)
+//        AF.request("\(api)/user/signin.do",
+//                   method: .post,
+//                   parameters: ["emil": id,
+//                                "password": pw],
+//                   encoding : JSONEncoding.default,
+//                   headers: ["Content-Type": "application/json"]
+//        )
+//        .validate()
+//        .responseData { response in
+//            switch response.result {
+//            case.success:
                 let VC = TabBarcontroller()
                 VC.modalPresentationStyle = .fullScreen
                 self.present(VC, animated: true, completion: nil)
-                guard let value = response.value else { return }
-                guard let result = try? JSONDecoder().decode(LoginData.self, from: value) else { return }
-                UserDefaults.standard.set(result.data.token, forKey: "token")
-            case.failure(let error):
-                print("통신 오류!\nCode:\(error._code), Message: \(error.errorDescription!)")
-            }
-        }
+//                guard let value = response.value else { return }
+//                guard let result = try? JSONDecoder().decode(LoginData.self, from: value) else { return }
+//                UserDefaults.standard.set(result.data.token, forKey: "token")
+//            case.failure(let error):
+//                print("통신 오류!\nCode:\(error._code), Message: \(error.errorDescription!)")
+//            }
+//        }
     }
     
     func setup() {
