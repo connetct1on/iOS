@@ -24,8 +24,9 @@ class ChannelVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setup()
+        Messages = channelCell()
+        
     }
     
     private func setup() {
@@ -33,10 +34,9 @@ class ChannelVC: UIViewController {
         channelView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-        Messages = getStackMocks()
+        
     }
 }
-
 extension ChannelVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Messages.count
@@ -53,5 +53,11 @@ extension ChannelVC: UITableViewDataSource, UITableViewDelegate {
         let cell = Messages[indexPath.row]
         let viewController = MessageVC(Stack: cell)
         navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+extension ChannelVC {
+    func channelCell() -> [Channel] {
+        let channel = Channel(profileImage: UIImage(named: "love"), id: "Asdf", name: "최시훈")
+            return [channel]
     }
 }
