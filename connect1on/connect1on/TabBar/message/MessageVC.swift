@@ -19,7 +19,7 @@ class MessageVC: MessagesViewController {
     
     let stack: Channel
     
-    var sender = Sender(senderId: "asdfasdfdddd", displayName: "sihun")
+    var sender = Sender(senderId: "최시훈", displayName: "sihun")
     
     var messages: [Message] = []
     
@@ -49,17 +49,15 @@ class MessageVC: MessagesViewController {
         setup()
         setupMessageInputBar()
         removeOutgoingMessageAvatars()
+        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         stompClient = StompClientLib()
-        
         connectStomp()
         
     }
-    
-    
     
     deinit {
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -73,12 +71,11 @@ class MessageVC: MessagesViewController {
     private func setup() {
         title = stack.name
         navigationController?.navigationBar.prefersLargeTitles = false
-        //                messages = getMessagesMock()
     }
     private func setupMessageInputBar() {
         messageInputBar.inputTextView.tintColor = .mainColor
         messageInputBar.sendButton.setTitleColor(.mainColor, for: .normal)
-        messageInputBar.inputTextView.placeholder = "Aa"
+        messageInputBar.inputTextView.placeholder = "메시지를 입력하세요"
         messageInputBar.backgroundView.backgroundColor = UIColor(red: 240.0/255, green: 240.0/255, blue: 240.0/255, alpha: 1)
     }
     
@@ -95,14 +92,12 @@ class MessageVC: MessagesViewController {
         messages.sort()
         messagesCollectionView.reloadData()
     }
-    
-    
 }
 
 // 오류 고침
 extension MessageVC: MessagesDataSource {
     var currentSender: MessageKit.SenderType {
-        return sender
+        return Sender(senderId: "id", displayName: "username")
     }
     
     func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
@@ -151,12 +146,13 @@ extension MessageVC: MessagesDisplayDelegate {
     func textColor(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
         return isFromCurrentSender(message: message) ? .black : .black
     }
-    
-    
     // 말풍선의 꼬리 모양 방향
     func messageStyle(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageStyle {
         let cornerDirection: MessageStyle.TailCorner = isFromCurrentSender(message: message) ? .bottomRight : .bottomLeft
         return .bubbleTail(cornerDirection, .curved)
+    }
+    func isFromCurrentSender(message: MessageType) -> Bool {
+        return message.sender.senderId == currentSender.senderId
     }
 }
 
@@ -166,6 +162,19 @@ extension MessageVC: InputBarAccessoryViewDelegate {
         insertNewMessage(message)
         inputBar.inputTextView.text.removeAll()
     }
+}
+extension MessageVC {
+//    func tailDirection() {
+//        if messages.sender.senderId == currentSender {
+//                // Set the message style to bubbleTail with bottomRight and curved tail
+//                cell.messageStyle = .bubbleTail(.bottomRight, .curved)
+//            } else {
+//                // Set the message style to bubbleTail with bottomLeft and curved tail
+//                cell.messageStyle = .bubbleTail(.bottomLeft, .curved)
+//            }
+//    }
+    
+    
 }
 extension MessageVC: StompClientLibDelegate {
     func stompClient(client: StompClientLib!, didReceiveMessageWithJSONBody jsonBody: AnyObject?, akaStringBody stringBody: String?, withHeader header: [String : String]?, withDestination destination: String) {
@@ -186,25 +195,23 @@ extension MessageVC: StompClientLibDelegate {
         }
     }
     func stompClientDidDisconnect(client: StompClientLib!) {
-        print("stompClientDidDisconnect")
+        print("StompClientDidDisconnect")
         stompClient.unsubscribe(destination: subscribe)
     }
     func stompClientDidConnect(client: StompClientLib!) {
-        print("stompClientDidConnect")
+        print("StompClientDidConnect")
         stompClient.subscribe(destination: subscribe)
-        
-        print("⭐️")
     }
     func serverDidSendReceipt(client: StompClientLib!, withReceiptId receiptId: String) {
-        print("serverDidSendReceipt")
+        print("ServerDidSendReceipt")
         
     }
     func serverDidSendError(client: StompClientLib!, withErrorMessage description: String, detailedErrorMessage message: String?) {
         stompClient.reconnect(request: NSURLRequest(url: url as URL) , delegate: self as StompClientLibDelegate, time: 4.0)
-        print("🚫serverDidSendError🚫")
+        print("🚫ServerDidSendError🚫")
     }
     func serverDidSendPing() {
-        print("sercerDidSendPing")
+        print("SercerDidSendPing")
     }
     func connectStomp() {
         let headers = [
@@ -235,15 +242,12 @@ extension MessageVC: StompClientLibDelegate {
             let headers = [
                 "Authorization":"Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJja3NndXIwNjEyQGRnc3cuaHMua3IiLCJhdXRoIjoiUk9MRV9HVUVTVCIsImV4cCI6MTY3ODcwOTM3MH0.aQgtMVce83q1jRllAQqjfgT-32fErxFjrGiNju-IpVU"
             ]
-            
+
             stompClient.sendMessage(message: stringData, toDestination: "/pub/chat/user/", withHeaders: headers, withReceipt: nil)
             print("⭐️")
-        }
-        
-        catch {
+        } catch {
             print("😡")
         }
-        
     }
     
     
@@ -263,12 +267,10 @@ extension MessageVC: StompClientLibDelegate {
             let stringData = String(data: jsonData, encoding: .utf8)!
             
             let headers = ["Authorization":"Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJja3NndXIwNjEyQGRnc3cuaHMua3IiLCJhdXRoIjoiUk9MRV9HVUVTVCxST0xFX1VTRVIsUk9MRV9BRE1JTiIsImV4cCI6MTY3ODYxNTUwOH0.mNEP7yu-U8Pownft1APL0cijgPe2jmBpHeLvq7PZe-U"]
-            
-            let receiptId: String = "cksgur0612@dgsw.hs.kr"
+
             stompClient.sendMessage(message: stringData, toDestination: "/pub/chat/user/", withHeaders: headers, withReceipt: nil)
             print("😁")
-        }
-        catch {
+        } catch {
             print("😡")
         }
     }
