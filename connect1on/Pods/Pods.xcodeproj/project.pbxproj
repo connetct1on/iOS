@@ -96,7 +96,7 @@
 		338E7C398396B2954605345C2B874C42 /* Pods-connect1on-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-connect1on-acknowledgements.markdown"; sourceTree = "<group>"; };
 		357CA906D10FF1DE1B1ECEA925FA2047 /* StompClientLib-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StompClientLib-prefix.pch"; sourceTree = "<group>"; };
 		3582DD0412F20164BADE17B610648917 /* SRWebSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRWebSocket.h; path = SocketRocket/SRWebSocket.h; sourceTree = "<group>"; };
-		38C59ADED07962C73869AEE77E82DD87 /* StompClientLib */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = StompClientLib; path = StompClientLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38C59ADED07962C73869AEE77E82DD87 /* StompClientLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StompClientLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B70F1E4FC53B2E15A9011492D89DA85 /* NSRunLoop+SRWebSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSRunLoop+SRWebSocket.m"; path = "SocketRocket/NSRunLoop+SRWebSocket.m"; sourceTree = "<group>"; };
 		432FBCBA6818446DB96D0C998840A4D5 /* StompClientLib-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StompClientLib-dummy.m"; sourceTree = "<group>"; };
 		459A77F3BA8AB300835624CEDB801B76 /* StompClientLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StompClientLib.release.xcconfig; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 		805BD540C1B374D25F7600D9219D65C0 /* SRSIMDHelpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRSIMDHelpers.m; path = SocketRocket/Internal/Utilities/SRSIMDHelpers.m; sourceTree = "<group>"; };
 		81A2C0F7E56C0D1EBAE1D2FDD0301AFE /* SRHash.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRHash.m; path = SocketRocket/Internal/Utilities/SRHash.m; sourceTree = "<group>"; };
 		84CE9118722CBEF4E930C73D53D0EA77 /* Pods-connect1on-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-connect1on-Info.plist"; sourceTree = "<group>"; };
-		85A01882ED06DFEA2E0CE78BCDB204A7 /* SocketRocket */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SocketRocket; path = SocketRocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85A01882ED06DFEA2E0CE78BCDB204A7 /* SocketRocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SocketRocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		872F0571478D7BFDAAD15767E4EDFC23 /* SRProxyConnect.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRProxyConnect.h; path = SocketRocket/Internal/Proxy/SRProxyConnect.h; sourceTree = "<group>"; };
 		89CD9DBEA04B50A11C055D1A282500ED /* NSURLRequest+SRWebSocketPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLRequest+SRWebSocketPrivate.h"; path = "SocketRocket/Internal/NSURLRequest+SRWebSocketPrivate.h"; sourceTree = "<group>"; };
 		8BE95D6EF6EF811CD7AC4654AE898A93 /* Pods-connect1on.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-connect1on.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 		95596015C7B28E941024E91D5EEE4809 /* SRPinningSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRPinningSecurityPolicy.m; path = SocketRocket/Internal/Security/SRPinningSecurityPolicy.m; sourceTree = "<group>"; };
 		9675BAFBC2653F686E536DE8AB7B9F73 /* SRHash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRHash.h; path = SocketRocket/Internal/Utilities/SRHash.h; sourceTree = "<group>"; };
 		9CFB9CD7273F3F7F2732C0D213885E30 /* SRURLUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRURLUtilities.h; path = SocketRocket/Internal/Utilities/SRURLUtilities.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A6BE90665B4A1053C5FF26D5289CBC83 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		A818250AF635A0738081C432A319AFB5 /* SocketRocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SocketRocket.debug.xcconfig; sourceTree = "<group>"; };
 		AAB987CCDB58839BE53B0ADB4D4E152F /* SRLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRLog.m; path = SocketRocket/Internal/Utilities/SRLog.m; sourceTree = "<group>"; };
@@ -237,7 +237,6 @@
 				5FA3DE23C0F5C9F5259207AAECD1A9F9 /* StompClientLib.swift */,
 				5AEAE29C70C072716C9B2668F3835C78 /* Support Files */,
 			);
-			name = StompClientLib;
 			path = StompClientLib;
 			sourceTree = "<group>";
 		};
@@ -302,7 +301,6 @@
 				8E67DD929E9978F217777DA88A09227F /* SRWebSocket.m */,
 				85F7A8C90A42419A650F035D03FE3E22 /* Support Files */,
 			);
-			name = SocketRocket;
 			path = SocketRocket;
 			sourceTree = "<group>";
 		};
@@ -331,8 +329,8 @@
 			isa = PBXGroup;
 			children = (
 				51E9FD27D7CEFFBF07AD1A8BAE1910E1 /* Pods-connect1on */,
-				85A01882ED06DFEA2E0CE78BCDB204A7 /* SocketRocket */,
-				38C59ADED07962C73869AEE77E82DD87 /* StompClientLib */,
+				85A01882ED06DFEA2E0CE78BCDB204A7 /* SocketRocket.framework */,
+				38C59ADED07962C73869AEE77E82DD87 /* StompClientLib.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -421,7 +419,7 @@
 			);
 			name = SocketRocket;
 			productName = SocketRocket;
-			productReference = 85A01882ED06DFEA2E0CE78BCDB204A7 /* SocketRocket */;
+			productReference = 85A01882ED06DFEA2E0CE78BCDB204A7 /* SocketRocket.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		BD357877094CC6561657F2D15837D659 /* StompClientLib */ = {
@@ -440,7 +438,7 @@
 			);
 			name = StompClientLib;
 			productName = StompClientLib;
-			productReference = 38C59ADED07962C73869AEE77E82DD87 /* StompClientLib */;
+			productReference = 38C59ADED07962C73869AEE77E82DD87 /* StompClientLib.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		DDF8714A41DCBD68770D205E7C15295E /* Pods-connect1on */ = {
@@ -470,7 +468,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1420;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -724,6 +722,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -895,6 +894,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
