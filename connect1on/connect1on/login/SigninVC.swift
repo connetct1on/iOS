@@ -33,6 +33,7 @@ class SigninVC: UIViewController {
         $0.font = .systemFont(ofSize: 14.0, weight: .medium)
         $0.autocapitalizationType = .none
         $0.backgroundColor = .secondColor
+        $0.leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 8.0, height: 0.0))
         $0.layer.cornerRadius = 20
     }
     let pwlb = UILabel().then {
@@ -45,6 +46,7 @@ class SigninVC: UIViewController {
         $0.autocapitalizationType = .none
         $0.isSecureTextEntry = true
         $0.backgroundColor = .secondColor
+        $0.leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 8.0, height: 0.0))
         $0.layer.cornerRadius = 20
     }
     let signinBt = UIButton().then {
@@ -53,6 +55,18 @@ class SigninVC: UIViewController {
         $0.layer.cornerRadius = 20
         $0.addTarget(self, action: #selector(TabsigninBt), for: .touchUpInside)
     }
+    let signUpLabel = UILabel().then {
+        $0.text = "계정이 없으시다고요??"
+        $0.font = .systemFont(ofSize: 8.0)
+        $0.textAlignment = .right
+    }
+    let signUpButton = UIButton().then {
+        $0.setTitle("회원가입", for: .normal)
+        $0.setTitleColor(.black, for: .normal)
+        $0.titleLabel?.font = UIFont.systemFont(ofSize: 10.0)
+        $0.addTarget(self, action: #selector(didTabGoTosignUpButton), for: .touchUpInside)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,35 +77,39 @@ class SigninVC: UIViewController {
 }
 extension SigninVC {
     @objc func TabsigninBt() {
-//        let id = idTextField.text!
-//        let pw = pwTextField.text!
-//        print(id, pw)
-//        AF.request("\(api)/user/signin.do",
-//                   method: .post,
-//                   parameters: ["emil": id,
-//                                "password": pw],
-//                   encoding : JSONEncoding.default,
-//                   headers: ["Content-Type": "application/json"]
-//        )
-//        .validate()
-//        .responseData { response in
-//            switch response.result {
-//            case.success:
+        let id = idTextField.text!
+        let pw = pwTextField.text!
+        print(id, pw)
+        AF.request("\(api)/user/login.do",
+                   method: .post,
+                   parameters: ["emil": id,
+                                "password": pw],
+                   encoding : JSONEncoding.default,
+                   headers: ["Content-Type": "application/json"]
+        )
+        .validate()
+        .responseData { response in
+            switch response.result {
+            case.success:
                 let VC = TabBarcontroller()
                 VC.modalPresentationStyle = .fullScreen
                 self.present(VC, animated: true, completion: nil)
-//                guard let value = response.value else { return }
-//                guard let result = try? JSONDecoder().decode(LoginData.self, from: value) else { return }
-//                UserDefaults.standard.set(result.data.token, forKey: "token")
-//            case.failure(let error):
-//                print("통신 오류!\nCode:\(error._code), Message: \(error.errorDescription!)")
-//            }
-//        }
+                guard let value = response.value else { return }
+                guard let result = try? JSONDecoder().decode(LoginData.self, from: value) else { return }
+                UserDefaults.standard.set(result.data.token, forKey: "token")
+                //                print("\(result.data.token)")
+            case.failure(let error):
+                print("통신 오류!\nCode:\(error._code), Message: \(error.errorDescription!)")
+            }
+        }
     }
-    
+    @objc func didTabGoTosignUpButton() {
+            let VC = SignUpVC()
+            present(VC, animated: true, completion: nil)
+        }
     func setup() {
         [
-            logolb, idlb, idTextField, pwTextField, pwlb, pwTextField, signinBt
+            logolb, idlb, idTextField, pwTextField, pwlb, pwTextField, signinBt, signUpLabel, signUpButton
         ].forEach{ self.view.addSubview($0) }
         logolb.snp.makeConstraints {
             $0.top.equalToSuperview().offset(120)
@@ -128,5 +146,17 @@ extension SigninVC {
             $0.left.equalToSuperview().offset(70)
             $0.right.equalToSuperview().offset(-70)
         }
+        signUpLabel.snp.makeConstraints {
+                    $0.top.equalTo(signinBt.snp.bottom).offset(-5)
+                    $0.bottom.equalTo(signUpLabel.snp.top).offset(20)
+                    $0.left.equalToSuperview().offset(70)
+                    $0.right.equalTo(signUpLabel.snp.left).offset(200)
+                }
+                signUpButton.snp.makeConstraints {
+                    $0.top.equalTo(signinBt.snp.bottom).offset(5)
+                    $0.bottom.equalTo(signUpButton.snp.top).offset(15)
+                    $0.left.equalTo(signUpLabel.snp.right).offset(3)
+                    $0.right.equalToSuperview().offset(-70)
+                }
     }
 }
