@@ -17,7 +17,9 @@
 		8505CDE72954A1E0008E4932 /* Sender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDE62954A1E0008E4932 /* Sender.swift */; };
 		8505CDEA2954A355008E4932 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDE92954A355008E4932 /* Mocks.swift */; };
 		8505CDEC295528B1008E4932 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505CDEB295528B1008E4932 /* ViewController.swift */; };
+		85069D9F29C5C8AE00FCB9F3 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85069D9E29C5C8AE00FCB9F3 /* SignupVC.swift */; };
 		8510C300292F81950093BD1A /* MessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8510C2FF292F81950093BD1A /* MessageVC.swift */; };
+		8511375429C339F4009E4927 /* Tocken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511375329C339F4009E4927 /* Tocken.swift */; };
 		8531E1A1294D042200C78AAF /* FacilitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531E1A0294D042200C78AAF /* FacilitiesVC.swift */; };
 		8531E1A3294D049C00C78AAF /* EventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531E1A2294D049C00C78AAF /* EventVC.swift */; };
 		8542293929677DF3009FDE3F /* AddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8542293829677DF3009FDE3F /* AddVC.swift */; };
@@ -73,7 +75,9 @@
 		8505CDE92954A355008E4932 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		8505CDEB295528B1008E4932 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8505CDEF29552955008E4932 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85069D9E29C5C8AE00FCB9F3 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		8510C2FF292F81950093BD1A /* MessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageVC.swift; sourceTree = "<group>"; };
+		8511375329C339F4009E4927 /* Tocken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tocken.swift; sourceTree = "<group>"; };
 		8531E1A0294D042200C78AAF /* FacilitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilitiesVC.swift; sourceTree = "<group>"; };
 		8531E1A2294D049C00C78AAF /* EventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventVC.swift; sourceTree = "<group>"; };
 		8542293829677DF3009FDE3F /* AddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVC.swift; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 			children = (
 				8505CDDD295486A7008E4932 /* NSObjc.swift */,
 				8505CDE02954A038008E4932 /* Color.swift */,
+				8511375329C339F4009E4927 /* Tocken.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				85E2EEAA29266232000636BC /* SigninVC.swift */,
+				85069D9E29C5C8AE00FCB9F3 /* SignupVC.swift */,
 			);
 			path = login;
 			sourceTree = "<group>";
@@ -478,6 +484,7 @@
 				858024F02938D483003BBF05 /* SetVC.swift in Sources */,
 				858024B829378E4E003BBF05 /* Signin.swift in Sources */,
 				858024B62937806C003BBF05 /* API.swift in Sources */,
+				85069D9F29C5C8AE00FCB9F3 /* SignupVC.swift in Sources */,
 				8505CDEC295528B1008E4932 /* ViewController.swift in Sources */,
 				8505CDDC29547362008E4932 /* Channel.swift in Sources */,
 				85E2EEAB29266232000636BC /* SigninVC.swift in Sources */,
@@ -491,6 +498,7 @@
 				8505CDE72954A1E0008E4932 /* Sender.swift in Sources */,
 				8531E1A3294D049C00C78AAF /* EventVC.swift in Sources */,
 				85EB631C29A65E4000BAD73F /* Message.swift in Sources */,
+				8511375429C339F4009E4927 /* Tocken.swift in Sources */,
 				8510C300292F81950093BD1A /* MessageVC.swift in Sources */,
 				85F6AF7C296AEB9400FCFB4C /* Question.swift in Sources */,
 				8505CDDE295486A7008E4932 /* NSObjc.swift in Sources */,
