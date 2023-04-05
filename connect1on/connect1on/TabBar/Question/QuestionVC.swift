@@ -12,8 +12,8 @@ import SnapKit
 import Kingfisher
 
 class QuestionVC: UIViewController {
-    var datas: [Question] = []
-    let url = URL(string: "https://ifh.cc/g/J8wf2m.png")
+    var datas = [Question]()
+//    let url = URL(string: "https://ifh.cc/g/J8wf2m.png")
     var images = ["love"]
     
     let tableView = UITableView(frame: .zero).then {
@@ -30,12 +30,14 @@ class QuestionVC: UIViewController {
         setupNavigationBarItem()
         self.tableView.reloadData()
         view.backgroundColor = .white
+        
     }
 }
 extension QuestionVC {
     func setupTableView(){
         view.addSubview(tableView)
         tableView.snp.makeConstraints{ $0.edges.equalToSuperview()}
+        datas = questionCell()
     }
     func configureTableView() {
         tableView.dataSource = self
@@ -47,8 +49,8 @@ extension QuestionVC {
         ].forEach{ self.view.addSubview($0)
         }
         tableView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(90)
-            $0.bottom.equalToSuperview().offset(-83)
+            $0.top.equalToSuperview().offset(0)
+            $0.bottom.equalToSuperview().offset(0)
             $0.left.right.equalToSuperview().offset(0)
         }
     }
@@ -96,4 +98,8 @@ extension QuestionVC: UITableViewDataSource {
         
         return cell ?? QuestionTableViewCell()
     }
+    func questionCell() -> [Question] {
+        let question = Question(profileImage: UIImage(named: "love")!, studentNumber: "1117", name: "최시훈", title: "화장실에서..", detail: "똥 좀 쌀래요")
+            return [question]
+        }
 }

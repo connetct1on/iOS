@@ -9,10 +9,10 @@ import UIKit
 import SnapKit
 import Then
 class QuestionTableViewCell: UITableViewCell {
-        let profileImage = UIImageView().then {
-            $0.image = UIImage(named: "love")
-            $0.layer.cornerRadius = 10
-        }
+    let profileImage = UIImageView().then {
+        $0.image = UIImage(named: "love")
+        $0.layer.cornerRadius = 10
+    }
     let studentNumber = UILabel().then {
         $0.text = "1111"
         $0.font = .systemFont(ofSize: 14.0, weight: .medium)
@@ -46,8 +46,7 @@ class QuestionTableViewCell: UITableViewCell {
             name,
             studentNumber,
             title,
-            detail,
-            
+            detail
         ].forEach{ addSubview($0) }
         
         profileImage.snp.makeConstraints{
