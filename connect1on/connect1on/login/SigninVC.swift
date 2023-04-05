@@ -19,6 +19,9 @@ class SigninVC: UIViewController {
         var request: Bool = false
         var success: Bool = false
     }
+    
+    
+    
     let logolb = UILabel().then {
         $0.text = "ALT"
         $0.font = .systemFont(ofSize: 150.0, weight: .medium)
@@ -67,7 +70,6 @@ class SigninVC: UIViewController {
         $0.addTarget(self, action: #selector(didTabGoTosignUpButton), for: .touchUpInside)
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -79,34 +81,44 @@ extension SigninVC {
     @objc func TabsigninBt() {
         let id = idTextField.text!
         let pw = pwTextField.text!
-        print(id, pw)
-        AF.request("\(api)/user/login.do",
-                   method: .post,
-                   parameters: ["emil": id,
-                                "password": pw],
-                   encoding : JSONEncoding.default,
-                   headers: ["Content-Type": "application/json"]
-        )
-        .validate()
-        .responseData { response in
-            switch response.result {
-            case.success:
+//        print(id, pw)
+//        AF.request("\(api)/api/user/login.do",
+//                   method: .post,
+//                   parameters: [
+//                    "email": id,
+//                    "password": pw
+//                   ],
+//                   encoding : JSONEncoding.default,
+//                   headers: [
+//                    "Content-Type": "application/json"]
+//        )
+//        .validate()
+//        .responseData { response in
+//            switch response.result {
+//            case.success:
                 let VC = TabBarcontroller()
                 VC.modalPresentationStyle = .fullScreen
                 self.present(VC, animated: true, completion: nil)
-                guard let value = response.value else { return }
-                guard let result = try? JSONDecoder().decode(LoginData.self, from: value) else { return }
-                UserDefaults.standard.set(result.data.token, forKey: "token")
-                //                print("\(result.data.token)")
-            case.failure(let error):
-                print("통신 오류!\nCode:\(error._code), Message: \(error.errorDescription!)")
-            }
-        }
+//                guard let value = response.value else { return }
+//                guard let result = try? JSONDecoder().decode(LoginDatas.self, from: value) else { return }
+//                print("\(value)")
+//                UserDefaults.standard.set(result.token, forKey: "accessToken")
+//                if let token = UserDefaults.standard.string(forKey: "accessToken") {
+//                    print("Token: \(token)")
+//                } else {
+//                    print("Token not found")
+//                }
+//            case.failure(let error):
+//                print("통신 오류!\nCode:\(error._code), Message: \(error.errorDescription!)")
+//            }
+//        }
     }
     @objc func didTabGoTosignUpButton() {
-            let VC = SignUpVC()
-            present(VC, animated: true, completion: nil)
-        }
+        let VC = SignUpVC()
+        present(VC, animated: true, completion: nil)
+    }
+    
+    
     func setup() {
         [
             logolb, idlb, idTextField, pwTextField, pwlb, pwTextField, signinBt, signUpLabel, signUpButton
@@ -147,16 +159,16 @@ extension SigninVC {
             $0.right.equalToSuperview().offset(-70)
         }
         signUpLabel.snp.makeConstraints {
-                    $0.top.equalTo(signinBt.snp.bottom).offset(-5)
-                    $0.bottom.equalTo(signUpLabel.snp.top).offset(20)
-                    $0.left.equalToSuperview().offset(70)
-                    $0.right.equalTo(signUpLabel.snp.left).offset(200)
-                }
-                signUpButton.snp.makeConstraints {
-                    $0.top.equalTo(signinBt.snp.bottom).offset(5)
-                    $0.bottom.equalTo(signUpButton.snp.top).offset(15)
-                    $0.left.equalTo(signUpLabel.snp.right).offset(3)
-                    $0.right.equalToSuperview().offset(-70)
-                }
+            $0.top.equalTo(signinBt.snp.bottom).offset(-5)
+            $0.bottom.equalTo(signUpLabel.snp.top).offset(20)
+            $0.left.equalToSuperview().offset(70)
+            $0.right.equalTo(signUpLabel.snp.left).offset(200)
+        }
+        signUpButton.snp.makeConstraints {
+            $0.top.equalTo(signinBt.snp.bottom).offset(5)
+            $0.bottom.equalTo(signUpButton.snp.top).offset(15)
+            $0.left.equalTo(signUpLabel.snp.right).offset(3)
+            $0.right.equalToSuperview().offset(-70)
+        }
     }
 }
