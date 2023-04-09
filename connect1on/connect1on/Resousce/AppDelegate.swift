@@ -11,8 +11,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        Thread.sleep(forTimeInterval: 1.0)    // 런치스크린 표시 시간 0초 강제 지연
-           // Override point for customization after application launch.
+        Thread.sleep(forTimeInterval: 1.0)    // 런치스크린 표시 시간 1초 강제 지연
            
           
            return true
