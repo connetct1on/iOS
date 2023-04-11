@@ -8,6 +8,6 @@
 import MessageKit
 
 struct Sender: SenderType {
-    var senderId: String
-    var displayName: String
+    var senderId = "최시훈"
+    var displayName = "sihun"
 }

@@ -11,6 +11,9 @@ import SnapKit
 import MessageKit
 
 class ChannelVC: UIViewController {
+    
+    var Messages = [Channel]()
+    
     lazy var channelView: UITableView = {
         let view = UITableView()
         view.register(MessageTableViewCell.self, forCellReuseIdentifier: MessageTableViewCell.className)
@@ -19,8 +22,6 @@ class ChannelVC: UIViewController {
         
         return view
     }()
-    
-    var Messages = [Channel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
